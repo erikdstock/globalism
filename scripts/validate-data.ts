@@ -61,9 +61,26 @@ class DataValidator {
     try {
       const content = readFileSync(this.groupsPath, 'utf-8');
       const match = content.match(/export const countryGroups: CountryGroup\[\] = ([\s\S]*);/);
-      if (!match) return [];
-      return JSON.parse(match[1]);
-    } catch {
+      if (!match) {
+        console.warn('Could not parse countryGroups - no match found');
+        return [];
+      }
+      // Replace enum references with their string values for parsing
+      let jsonStr = match[1]
+        .replace(/GroupingType\.PoliticalUnion/g, '"POLITICAL_UNION"')
+        .replace(/GroupingType\.MilitaryAlliance/g, '"MILITARY_ALLIANCE"')
+        .replace(/GroupingType\.EconomicUnion/g, '"ECONOMIC_UNION"')
+        .replace(/GroupingType\.Continent/g, '"CONTINENT"')
+        .replace(/GroupingType\.Region/g, '"REGION"')
+        .replace(/GroupingType\.CustomsUnion/g, '"CUSTOMS_UNION"')
+        .replace(/GroupingType\.CurrencyUnion/g, '"CURRENCY_UNION"')
+        .replace(/GroupingType\.FreeTradeArea/g, '"FREE_TRADE_AREA"')
+        .replace(/GroupingType\.CulturalGroup/g, '"CULTURAL_GROUP"')
+        .replace(/GroupingType\.Other/g, '"OTHER"');
+      
+      return JSON.parse(jsonStr);
+    } catch (error) {
+      console.warn('Error loading country groups:', error);
       return [];
     }
   }

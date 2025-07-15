@@ -5,12 +5,13 @@ export async function generateStaticParams() {
   return countries.map((c) => ({ alpha2: c.alpha2 }));
 }
 
-export default function CountryPage({
+export default async function CountryPage({
   params,
 }: {
-  params: { alpha2: string };
+  params: Promise<{ alpha2: string }>;
 }) {
-  const country = findCountryByAlpha2(params.alpha2);
+  const { alpha2 } = await params;
+  const country = findCountryByAlpha2(alpha2);
 
   if (!country) return <div>Country not found</div>;
   return (
