@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(yarn update-data:*)"
+      "Bash(yarn update-data:*)",
+      "Bash(yarn test:*)"
     ],
     "deny": []
   }
