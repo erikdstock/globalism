@@ -2,7 +2,7 @@
 
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import type { Country, CountryGroup, Language } from '../src/data/types';
+import type { Country, CountryGroup, Language } from '../packages/globalism/src/data/types';
 
 interface ValidationResult {
   valid: boolean;
@@ -11,9 +11,9 @@ interface ValidationResult {
 }
 
 class DataValidator {
-  private countriesPath = join(__dirname, '../src/data/countries.ts');
-  private groupsPath = join(__dirname, '../src/data/countryGroups.ts');
-  private languagesPath = join(__dirname, '../src/data/languages.ts');
+  private countriesPath = join(__dirname, '../packages/globalism/src/data/countries.ts');
+  private groupsPath = join(__dirname, '../packages/globalism/src/data/countryGroups.ts');
+  private languagesPath = join(__dirname, '../packages/globalism/src/data/languages.ts');
 
   async validateAll(): Promise<ValidationResult> {
     console.log('🔍 Starting comprehensive data validation...\n');

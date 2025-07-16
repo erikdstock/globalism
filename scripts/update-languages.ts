@@ -2,7 +2,7 @@
 
 import { writeFileSync, readFileSync } from 'fs';
 import { join } from 'path';
-import type { Language } from '../src/data/types';
+import type { Language } from '../packages/globalism/src/data/types';
 
 interface LanguageData {
   code: string;
@@ -200,7 +200,7 @@ class LanguageUpdater {
     { code: "zu", name: "Zulu", nativeName: "isiZulu" }
   ];
 
-  private languagesFilePath = join(__dirname, '../src/data/languages.ts');
+  private languagesFilePath = join(__dirname, '../packages/globalism/src/data/languages.ts');
 
   async updateLanguages(): Promise<void> {
     try {
@@ -229,7 +229,7 @@ export const languages: Language[] = ${JSON.stringify(this.languageData, null, 2
 
   async validateLanguageUsage(): Promise<void> {
     try {
-      const countriesFilePath = join(__dirname, '../src/data/countries.ts');
+      const countriesFilePath = join(__dirname, '../packages/globalism/src/data/countries.ts');
       const countriesContent = readFileSync(countriesFilePath, 'utf-8');
       const countriesMatch = countriesContent.match(/export const countries: Country\[\] = ([\s\S]*);/);
       

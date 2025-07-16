@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(yarn update-data:*)",
-      "Bash(yarn test:*)"
+      "Bash(yarn test:*)",
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(yarn workspace globalism:*)",
+      "Bash(grep:*)",
+      "Bash(sed:*)",
+      "Bash(yarn update-countries:*)"
     ],
     "deny": []
   }

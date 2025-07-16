@@ -2,7 +2,7 @@
 
 import { writeFileSync } from 'fs';
 import { join } from 'path';
-import type { Country } from '../src/data/types';
+import type { Country } from '../packages/globalism/src/data/types';
 
 // Comprehensive fallback data with all major countries
 const comprehensiveCountryData: Country[] = [
@@ -91,7 +91,7 @@ export function generateComprehensiveFallback(): void {
 export const countries: Country[] = ${JSON.stringify(comprehensiveCountryData, null, 2)};
 `;
 
-  const filePath = join(__dirname, '../src/data/countries.ts');
+  const filePath = join(__dirname, '../packages/globalism/src/data/countries.ts');
   writeFileSync(filePath, fileContent, 'utf-8');
   
   console.log(`✅ Generated comprehensive fallback with ${comprehensiveCountryData.length} countries`);

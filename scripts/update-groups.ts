@@ -2,8 +2,8 @@
 
 import { writeFileSync, readFileSync } from 'fs';
 import { join } from 'path';
-import type { Country, CountryGroup } from '../src/data/types';
-import { GroupingType } from '../src/data/types';
+import type { Country, CountryGroup } from '../packages/globalism/src/data/types';
+import { GroupingType } from '../packages/globalism/src/data/types';
 
 interface GroupDefinition {
   id: string;
@@ -122,8 +122,8 @@ class CountryGroupsUpdater {
     }
   ];
 
-  private countriesFilePath = join(__dirname, '../src/data/countries.ts');
-  private groupsFilePath = join(__dirname, '../src/data/countryGroups.ts');
+  private countriesFilePath = join(__dirname, '../packages/globalism/src/data/countries.ts');
+  private groupsFilePath = join(__dirname, '../packages/globalism/src/data/countryGroups.ts');
 
   async updateCountryGroups(): Promise<void> {
     try {
