@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd ../.. && yarn install && yarn workspace globalism build && yarn workspace globalism-demo build",
+  "outputDirectory": "packages/demo/.next"
+}
