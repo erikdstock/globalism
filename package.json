@@ -9,6 +9,7 @@
     "dev": "yarn workspace globalism-demo dev",
     "build": "yarn workspace globalism build && yarn workspace globalism-demo build",
     "test": "yarn workspace globalism test",
+    "start": "yarn workspace globalism-demo start",
     "update-data": "tsx scripts/update-all.ts",
     "update-countries": "tsx scripts/fetch-countries.ts",
     "update-groups": "tsx scripts/update-groups.ts",
