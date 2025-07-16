@@ -9,7 +9,8 @@
       "Bash(yarn workspace globalism:*)",
       "Bash(grep:*)",
       "Bash(sed:*)",
-      "Bash(yarn update-countries:*)"
+      "Bash(yarn update-countries:*)",
+      "Bash(yarn install)"
     ],
     "deny": []
   }
