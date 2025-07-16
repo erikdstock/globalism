@@ -2,7 +2,7 @@
 
 import { writeFileSync } from 'fs';
 import { join } from 'path';
-import type { Country, CountryGroup, Language } from '../src/data/types';
+import type { Country, CountryGroup, Language } from '../packages/globalism/src/data/types';
 
 interface RestCountryData {
   cca2: string;
@@ -258,7 +258,7 @@ class CountryDataFetcher {
 export const countries: Country[] = ${JSON.stringify(countries, null, 2)};
 `;
 
-      const filePath = join(__dirname, '../src/data/countries.ts');
+      const filePath = join(__dirname, '../packages/globalism/src/data/countries.ts');
       writeFileSync(filePath, fileContent, 'utf-8');
       
       console.log(`✅ Generated ${countries.length} countries in ${filePath}`);

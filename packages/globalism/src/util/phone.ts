@@ -1,4 +1,4 @@
-import { Country } from "@/data/types";
+import { Country } from "../data/types";
 
 export const generatePhonePlaceholder = (
   country: Country

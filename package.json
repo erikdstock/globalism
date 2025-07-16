@@ -1,23 +1,19 @@
 {
-  "name": "globalism",
+  "name": "globalism-workspace",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "test": "jest",
+    "dev": "yarn workspace globalism-demo dev",
+    "build": "yarn workspace globalism build && yarn workspace globalism-demo build",
+    "test": "yarn workspace globalism test",
     "update-data": "tsx scripts/update-all.ts",
     "update-countries": "tsx scripts/fetch-countries.ts",
     "update-groups": "tsx scripts/update-groups.ts",
     "update-languages": "tsx scripts/update-languages.ts",
     "validate-data": "tsx scripts/validate-data.ts"
-  },
-  "dependencies": {
-    "next": "15.3.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -36,6 +32,7 @@
     "tailwindcss": "^4",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
+    "tsup": "^8.0.0",
     "tsx": "^4.20.3",
     "typescript": "^5"
   }

@@ -1,16 +1,23 @@
 
 import { generatePhonePlaceholder, validatePhoneNumber, formatPhoneNumber, analyzePhoneNumber } from "../phone";
-import { Country } from "@/data/types";
+import { Country } from "../../data/types";
 
 describe("phone utilities", () => {
   const mockCountryUS: Country = {
     alpha2: "US",
     alpha3: "USA",
     name: "United States",
+    officialName: "United States of America",
+    nativeNames: [],
+    languages: ["en"],
+    currency: "USD",
+    currencySymbol: "$",
     flag: "🇺🇸",
     phoneCountryCode: "+1",
     phoneRegexp: "^\\\\(?\\\\d{3}\\\\)?[-.\\\\s]?\\\\d{3}[-.\\\\s]?\\\\d{4}$",
     phoneFormat: "(###) ###-####",
+    tld: ".us",
+    groups: [],
     postalCodeRegexp: "",
     postalCodeFormat: ""
   };
@@ -19,10 +26,17 @@ describe("phone utilities", () => {
     alpha2: "GB",
     alpha3: "GBR",
     name: "United Kingdom",
+    officialName: "United Kingdom of Great Britain and Northern Ireland",
+    nativeNames: [],
+    languages: ["en"],
+    currency: "GBP",
+    currencySymbol: "£",
     flag: "🇬🇧",
     phoneCountryCode: "+44",
     phoneRegexp: "^\\\\d{4}\\\\s?\\\\d{6}$",
     phoneFormat: "#### ######",
+    tld: ".uk",
+    groups: [],
     postalCodeRegexp: "",
     postalCodeFormat: ""
   };
@@ -31,10 +45,17 @@ describe("phone utilities", () => {
     alpha2: "XX",
     alpha3: "XXX",
     name: "Test Country",
+    officialName: "Test Country",
+    nativeNames: [],
+    languages: ["en"],
+    currency: "XXX",
+    currencySymbol: "X",
     flag: "🏳️",
     phoneCountryCode: "+999",
     phoneRegexp: "",
     phoneFormat: "",
+    tld: ".xx",
+    groups: [],
     postalCodeRegexp: "",
     postalCodeFormat: ""
   };
