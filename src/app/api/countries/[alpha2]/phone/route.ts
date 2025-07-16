@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   req: Request,
-  { params }: { params: { alpha2: string } }
+  { params }: { params: Promise<{ alpha2: string }> }
 ) {
-  const { alpha2 } = params;
+  const { alpha2 } = await params;
   if (!alpha2 || typeof alpha2 !== "string") {
     return NextResponse.json(
       { message: "Missing or invalid alpha2 parameter" },

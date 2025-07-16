@@ -7,7 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "update-data": "tsx scripts/update-all.ts",
+    "update-countries": "tsx scripts/fetch-countries.ts",
+    "update-groups": "tsx scripts/update-groups.ts",
+    "update-languages": "tsx scripts/update-languages.ts",
+    "validate-data": "tsx scripts/validate-data.ts"
   },
   "dependencies": {
     "next": "15.3.2",
@@ -30,6 +35,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "tailwindcss": "^4",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "^5"
   }
 }
