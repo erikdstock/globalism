@@ -83,6 +83,9 @@ formatCurrency(1234.56, us);
           Address templates: <a href="https://github.com/OpenCageData/address-formatting" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">OpenCageData address-formatting</a> (BSD 2-Clause)
         </p>
         <p>
+          Phone patterns: <a href="https://github.com/catamphetamine/libphonenumber-js" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">libphonenumber-js</a> (MIT), data from <a href="https://github.com/google/libphonenumber" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">Google libphonenumber</a> (Apache 2.0)
+        </p>
+        <p>
           <a href="https://github.com/erikdstock/globalism" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </p>
       </footer>

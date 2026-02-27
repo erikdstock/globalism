@@ -4,10 +4,12 @@ import { CountryDataFetcher } from './fetch-countries';
 import { CountryGroupsUpdater } from './update-groups';
 import { LanguageUpdater } from './update-languages';
 import { fetchAddressFormats } from './fetch-address-formats';
+import { fetchPhoneData } from './fetch-phone-data';
 import { DataValidator } from './validate-data';
 
 interface UpdateOptions {
   fetchCountries?: boolean;
+  fetchPhones?: boolean;
   fetchAddresses?: boolean;
   updateGroups?: boolean;
   updateLanguages?: boolean;
@@ -18,6 +20,7 @@ class MasterUpdater {
   async updateAll(options: UpdateOptions = {}): Promise<void> {
     const {
       fetchCountries = true,
+      fetchPhones = true,
       fetchAddresses = true,
       updateGroups = true,
       updateLanguages = true,
@@ -40,21 +43,28 @@ class MasterUpdater {
       console.log('');
     }
 
-    // Step 3: Address formats (depends on countries.json existing)
+    // Step 3: Phone regexps from libphonenumber-js (depends on countries.json existing)
+    if (fetchPhones) {
+      console.log('Fetching phone number patterns...');
+      fetchPhoneData();
+      console.log('');
+    }
+
+    // Step 4: Address formats (depends on countries.json existing)
     if (fetchAddresses) {
       console.log('Fetching address format templates...');
       await fetchAddressFormats();
       console.log('');
     }
 
-    // Step 4: Groups (depends on countries.json existing)
+    // Step 5: Groups (depends on countries.json existing)
     if (updateGroups) {
       console.log('Updating country groups...');
       await new CountryGroupsUpdater().updateCountryGroups();
       console.log('');
     }
 
-    // Step 5: Validate
+    // Step 6: Validate
     if (validate) {
       console.log('Validating data...');
       const result = await new DataValidator().validateAll();
@@ -82,7 +92,10 @@ function parseArgs(): UpdateOptions {
     return { fetchCountries: false, fetchAddresses: false, updateGroups: false, updateLanguages: true, validate: false };
   }
   if (args.includes('--addresses-only')) {
-    return { fetchCountries: false, fetchAddresses: true, updateGroups: false, updateLanguages: false, validate: false };
+    return { fetchCountries: false, fetchPhones: false, fetchAddresses: true, updateGroups: false, updateLanguages: false, validate: false };
+  }
+  if (args.includes('--phones-only')) {
+    return { fetchCountries: false, fetchPhones: true, fetchAddresses: false, updateGroups: false, updateLanguages: false, validate: false };
   }
   if (args.includes('--validate-only')) {
     return { fetchCountries: false, fetchAddresses: false, updateGroups: false, updateLanguages: false, validate: true };

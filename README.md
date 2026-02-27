@@ -91,7 +91,7 @@ The publishable NPM package. Data is stored as committed JSON files in `src/data
   currencySymbol: '$',
   languages: ['en'],
   phoneCode: '+1',
-  phoneRegexp: '^\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}$',
+  phoneRegexp: '^(?:[2-9]\\d{9}|3\\d{6})$',  // from libphonenumber-js metadata
   addressFormat: [             // OpenCageData Mustache template, one line per element
     '{{recipient}}',
     '{{house_number}} {{road}}',
@@ -131,16 +131,23 @@ yarn workspace globalism build
 
 ### Data pipeline
 
-Country data is fetched from [REST Countries](https://restcountries.com) and [OpenCageData address-formatting](https://github.com/OpenCageData/address-formatting) and committed to `packages/globalism/src/data/raw/`. Scripts live in `scripts/`.
+Country data is fetched from multiple sources and committed to `packages/globalism/src/data/raw/`. Scripts live in `scripts/`.
+
+| Source | Data |
+|---|---|
+| [REST Countries](https://restcountries.com) | Names, flags, currencies, calling codes, languages |
+| [libphonenumber-js](https://github.com/catamphetamine/libphonenumber-js) | Phone number validation patterns (243/250 countries) |
+| [OpenCageData address-formatting](https://github.com/OpenCageData/address-formatting) | Address templates |
 
 ```sh
 # Update all data sources
 yarn update-data
 
 # Or run individual steps
-yarn update-countries
-yarn update-languages
+yarn update-countries      # REST Countries API
+yarn update-phone-data     # libphonenumber-js metadata
 yarn update-address-formats
+yarn update-languages
 yarn update-groups
 yarn validate-data
 ```
@@ -152,6 +159,7 @@ The `Update Country Data` GitHub Actions workflow runs this pipeline monthly and
 ## Data sources and licenses
 
 - Country data: [REST Countries](https://restcountries.com) — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- Phone patterns: [libphonenumber-js](https://github.com/catamphetamine/libphonenumber-js) (MIT) — metadata derived from [Google's libphonenumber](https://github.com/google/libphonenumber) — [Apache 2.0](https://github.com/google/libphonenumber/blob/master/LICENSE)
 - Address templates: [OpenCageData address-formatting](https://github.com/OpenCageData/address-formatting) — [BSD 2-Clause](https://github.com/OpenCageData/address-formatting/blob/master/LICENSE)
 
-The `globalism` library itself is MIT licensed.
+The `globalism` library code is MIT licensed. The published package bundles data from the above sources — in particular, the REST Countries data is CC BY-SA 4.0 (ShareAlike), which means any redistribution of that data must carry the same license. Application developers consuming the library are generally unaffected, but downstream packages that re-export the `countries` array should note this.
