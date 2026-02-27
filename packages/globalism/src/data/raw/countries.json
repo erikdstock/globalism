@@ -16,15 +16,12 @@
     "currency": "AFN",
     "currencySymbol": "؋",
     "phoneCountryCode": "+93",
-    "phoneRegexp": "^(?:[2-7]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".af",
     "flag": "🇦🇫",
     "groups": [
       "ASIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[2-7]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -48,13 +45,10 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+35818",
-    "phoneRegexp": "^(?:2\\d{4,9}|35\\d{4,5}|(?:60\\d\\d|800)\\d{4,6}|7\\d{5,11}|(?:[14]\\d|3[0-46-9]|50)\\d{4,8})$",
-    "phoneFormat": "###########",
     "tld": ".ax",
     "flag": "🇦🇽",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:2\\d{4,9}|35\\d{4,5}|(?:60\\d\\d|800)\\d{4,6}|7\\d{5,11}|(?:[14]\\d|3[0-46-9]|50)\\d{4,8})$"
   },
   {
     "alpha2": "AL",
@@ -70,16 +64,13 @@
     "currency": "ALL",
     "currencySymbol": "L",
     "phoneCountryCode": "+355",
-    "phoneRegexp": "^(?:(?:700\\d\\d|900)\\d{3}|8\\d{5,7}|(?:[2-5]|6\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".al",
     "flag": "🇦🇱",
     "groups": [
       "NATO",
       "EUROPE"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:700\\d\\d|900)\\d{3}|8\\d{5,7}|(?:[2-5]|6\\d)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -103,8 +94,6 @@
     "currency": "DZD",
     "currencySymbol": "د.ج",
     "phoneCountryCode": "+213",
-    "phoneRegexp": "^(?:(?:[1-4]|[5-79]\\d|80)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".dz",
     "flag": "🇩🇿",
     "groups": [
@@ -113,6 +102,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:[1-4]|[5-79]\\d|80)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -138,13 +128,10 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1684",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|684|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".as",
     "flag": "🇦🇸",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|684|900)\\d{7})$"
   },
   {
     "alpha2": "AD",
@@ -160,8 +147,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+376",
-    "phoneRegexp": "^(?:(?:1|6\\d)\\d{7}|[135-9]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".ad",
     "flag": "🇦🇩",
     "groups": [
@@ -169,6 +154,7 @@
     ],
     "postalCodeRegexp": "^(?:AD)*(\\d{3})$",
     "postalCodeFormat": "AD###",
+    "phoneRegexp": "^(?:(?:1|6\\d)\\d{7}|[135-9]\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -192,16 +178,13 @@
     "currency": "AOA",
     "currencySymbol": "Kz",
     "phoneCountryCode": "+244",
-    "phoneRegexp": "^(?:[29]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".ao",
     "flag": "🇦🇴",
     "groups": [
       "OPEC",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[29]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -224,13 +207,10 @@
     "currency": "XCD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1264",
-    "phoneRegexp": "^(?:(?:264|[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".ai",
     "flag": "🇦🇮",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:264|[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -249,13 +229,9 @@
     "currency": "",
     "currencySymbol": "",
     "phoneCountryCode": "",
-    "phoneRegexp": "^\\d{7,15}$",
-    "phoneFormat": "###########",
     "tld": ".aq",
     "flag": "🇦🇶",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
     "addressFormat": [
       "{{{house}}}",
       "{{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}",
@@ -276,16 +252,13 @@
     "currency": "XCD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1268",
-    "phoneRegexp": "^(?:(?:268|[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".ag",
     "flag": "🇦🇬",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:268|[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -310,8 +283,6 @@
     "currency": "ARS",
     "currencySymbol": "$",
     "phoneCountryCode": "+54",
-    "phoneRegexp": "^(?:(?:11|[89]\\d\\d)\\d{8}|[2368]\\d{9})$",
-    "phoneFormat": "###########",
     "tld": ".ar",
     "flag": "🇦🇷",
     "groups": [
@@ -320,6 +291,7 @@
     ],
     "postalCodeRegexp": "^([A-Z]\\d{4}[A-Z]{3})$",
     "postalCodeFormat": "@####@@@",
+    "phoneRegexp": "^(?:(?:11|[89]\\d\\d)\\d{8}|[2368]\\d{9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -343,8 +315,6 @@
     "currency": "AMD",
     "currencySymbol": "֏",
     "phoneCountryCode": "+374",
-    "phoneRegexp": "^(?:(?:[1-489]\\d|55|60|77)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".am",
     "flag": "🇦🇲",
     "groups": [
@@ -352,6 +322,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:(?:[1-489]\\d|55|60|77)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -377,13 +348,10 @@
     "currency": "AWG",
     "currencySymbol": "ƒ",
     "phoneCountryCode": "+297",
-    "phoneRegexp": "^(?:(?:[25-79]\\d\\d|800)\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".aw",
     "flag": "🇦🇼",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[25-79]\\d\\d|800)\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -406,8 +374,6 @@
     "currency": "AUD",
     "currencySymbol": "$",
     "phoneCountryCode": "+61",
-    "phoneRegexp": "^(?:1(?:[0-79]\\d{7}(?:\\d(?:\\d{2})?)?|8[0-24-9]\\d{7})|[2-478]\\d{8}|1\\d{4,7})$",
-    "phoneFormat": "## #### ####",
     "tld": ".au",
     "flag": "🇦🇺",
     "groups": [
@@ -416,8 +382,10 @@
       "COMMONWEALTH",
       "OCEANIA"
     ],
+    "phoneFormat": "## #### ####",
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:1(?:[0-79]\\d{7}(?:\\d(?:\\d{2})?)?|8[0-24-9]\\d{7})|[2-478]\\d{8}|1\\d{4,7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -440,8 +408,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+43",
-    "phoneRegexp": "^(?:1\\d{3,12}|2\\d{6,12}|43(?:(?:0\\d|5[02-9])\\d{3,9}|2\\d{4,5}|[3467]\\d{4}|8\\d{4,6}|9\\d{4,7})|5\\d{4,12}|8\\d{7,12}|9\\d{8,12}|(?:[367]\\d|4[0-24-9])\\d{4,11})$",
-    "phoneFormat": "###########",
     "tld": ".at",
     "flag": "🇦🇹",
     "groups": [
@@ -451,6 +417,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:1\\d{3,12}|2\\d{6,12}|43(?:(?:0\\d|5[02-9])\\d{3,9}|2\\d{4,5}|[3467]\\d{4}|8\\d{4,6}|9\\d{4,7})|5\\d{4,12}|8\\d{7,12}|9\\d{8,12}|(?:[367]\\d|4[0-24-9])\\d{4,11})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -474,8 +441,6 @@
     "currency": "AZN",
     "currencySymbol": "₼",
     "phoneCountryCode": "+994",
-    "phoneRegexp": "^(?:365\\d{6}|(?:[124579]\\d|60|88)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".az",
     "flag": "🇦🇿",
     "groups": [
@@ -483,6 +448,7 @@
     ],
     "postalCodeRegexp": "^(?:AZ)*(\\d{4})$",
     "postalCodeFormat": "AZ ####",
+    "phoneRegexp": "^(?:365\\d{6}|(?:[124579]\\d|60|88)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -506,16 +472,13 @@
     "currency": "BSD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1242",
-    "phoneRegexp": "^(?:(?:242|[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".bs",
     "flag": "🇧🇸",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:242|[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -539,8 +502,6 @@
     "currency": "BHD",
     "currencySymbol": ".د.ب",
     "phoneCountryCode": "+973",
-    "phoneRegexp": "^(?:[136-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".bh",
     "flag": "🇧🇭",
     "groups": [
@@ -548,6 +509,7 @@
     ],
     "postalCodeRegexp": "^(\\d{3}\\d?)$",
     "postalCodeFormat": "####|###",
+    "phoneRegexp": "^(?:[136-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}, {{{quarter}}}",
@@ -570,8 +532,6 @@
     "currency": "BDT",
     "currencySymbol": "৳",
     "phoneCountryCode": "+880",
-    "phoneRegexp": "^(?:[1-469]\\d{9}|8[0-79]\\d{7,8}|[2-79]\\d{8}|[2-9]\\d{7}|[3-9]\\d{6}|[57-9]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".bd",
     "flag": "🇧🇩",
     "groups": [
@@ -580,6 +540,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[1-469]\\d{9}|8[0-79]\\d{7,8}|[2-79]\\d{8}|[2-9]\\d{7}|[3-9]\\d{6}|[57-9]\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -603,8 +564,6 @@
     "currency": "BBD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1246",
-    "phoneRegexp": "^(?:(?:246|[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".bb",
     "flag": "🇧🇧",
     "groups": [
@@ -613,6 +572,7 @@
     ],
     "postalCodeRegexp": "^(?:BB)*(\\d{5})$",
     "postalCodeFormat": "BB#####",
+    "phoneRegexp": "^(?:(?:246|[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -637,8 +597,6 @@
     "currency": "BYN",
     "currencySymbol": "Br",
     "phoneCountryCode": "+375",
-    "phoneRegexp": "^(?:(?:[12]\\d|33|44|902)\\d{7}|8(?:0[0-79]\\d{5,7}|[1-7]\\d{9})|8(?:1[0-489]|[5-79]\\d)\\d{7}|8[1-79]\\d{6,7}|8[0-79]\\d{5}|8\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".by",
     "flag": "🇧🇾",
     "groups": [
@@ -646,6 +604,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:(?:[12]\\d|33|44|902)\\d{7}|8(?:0[0-79]\\d{5,7}|[1-7]\\d{9})|8(?:1[0-489]|[5-79]\\d)\\d{7}|8[1-79]\\d{6,7}|8[0-79]\\d{5}|8\\d{5})$",
     "addressFormat": [
       "{{{country}}}",
       "{{{state}}}",
@@ -674,8 +633,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+32",
-    "phoneRegexp": "^(?:4\\d{8}|[1-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".be",
     "flag": "🇧🇪",
     "groups": [
@@ -686,6 +643,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:4\\d{8}|[1-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -712,16 +670,13 @@
     "currency": "BZD",
     "currencySymbol": "$",
     "phoneCountryCode": "+501",
-    "phoneRegexp": "^(?:(?:0800\\d|[2-8])\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".bz",
     "flag": "🇧🇿",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:0800\\d|[2-8])\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -744,15 +699,12 @@
     "currency": "XOF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+229",
-    "phoneRegexp": "^(?:(?:01\\d|8)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".bj",
     "flag": "🇧🇯",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:01\\d|8)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -775,13 +727,12 @@
     "currency": "BMD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1441",
-    "phoneRegexp": "^(?:(?:441|[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".bm",
     "flag": "🇧🇲",
     "groups": [],
     "postalCodeRegexp": "^([A-Z]{2}\\d{2})$",
     "postalCodeFormat": "@@ ##",
+    "phoneRegexp": "^(?:(?:441|[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}, {{{quarter}}}",
@@ -804,15 +755,12 @@
     "currency": "BTN",
     "currencySymbol": "Nu.",
     "phoneCountryCode": "+975",
-    "phoneRegexp": "^(?:[178]\\d{7}|[2-8]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".bt",
     "flag": "🇧🇹",
     "groups": [
       "ASIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[178]\\d{7}|[2-8]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -841,15 +789,12 @@
     "currency": "BOB",
     "currencySymbol": "Bs.",
     "phoneCountryCode": "+591",
-    "phoneRegexp": "^(?:8001\\d{5}|(?:[2-467]\\d|50)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".bo",
     "flag": "🇧🇴",
     "groups": [
       "SOUTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:8001\\d{5}|(?:[2-467]\\d|50)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -876,8 +821,6 @@
     "currency": "BAM",
     "currencySymbol": "KM",
     "phoneCountryCode": "+387",
-    "phoneRegexp": "^(?:6\\d{8}|(?:[35689]\\d|49|70)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".ba",
     "flag": "🇧🇦",
     "groups": [
@@ -885,6 +828,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:6\\d{8}|(?:[35689]\\d|49|70)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -910,16 +854,13 @@
     "currency": "BWP",
     "currencySymbol": "P",
     "phoneCountryCode": "+267",
-    "phoneRegexp": "^(?:(?:0800|(?:[37]|800)\\d)\\d{6}|(?:[2-6]\\d|90)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".bw",
     "flag": "🇧🇼",
     "groups": [
       "COMMONWEALTH",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:0800|(?:[37]|800)\\d)\\d{6}|(?:[2-6]\\d|90)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -943,13 +884,9 @@
     "currency": "",
     "currencySymbol": "",
     "phoneCountryCode": "+47",
-    "phoneRegexp": "^\\d{7,15}$",
-    "phoneFormat": "###########",
     "tld": ".bv",
     "flag": "🇧🇻",
-    "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "groups": []
   },
   {
     "alpha2": "BR",
@@ -965,8 +902,6 @@
     "currency": "BRL",
     "currencySymbol": "R$",
     "phoneCountryCode": "+55",
-    "phoneRegexp": "^(?:[1-467]\\d{9,10}|55[0-46-9]\\d{8}|[34]\\d{7}|55\\d{7,8}|(?:5[0-46-9]|[89]\\d)\\d{7,9})$",
-    "phoneFormat": "(##) #####-####",
     "tld": ".br",
     "flag": "🇧🇷",
     "groups": [
@@ -974,8 +909,10 @@
       "BRICS",
       "SOUTH_AMERICA"
     ],
+    "phoneFormat": "(##) #####-####",
     "postalCodeRegexp": "^(\\d{8})$",
     "postalCodeFormat": "#####-###",
+    "phoneRegexp": "^(?:[1-467]\\d{9,10}|55[0-46-9]\\d{8}|[34]\\d{7}|55\\d{7,8}|(?:5[0-46-9]|[89]\\d)\\d{7,9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1000,13 +937,10 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+246",
-    "phoneRegexp": "^(?:3\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".io",
     "flag": "🇮🇴",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:3\\d{6})$"
   },
   {
     "alpha2": "VG",
@@ -1022,13 +956,10 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1284",
-    "phoneRegexp": "^(?:(?:284|[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".vg",
     "flag": "🇻🇬",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:284|[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1051,8 +982,6 @@
     "currency": "BND",
     "currencySymbol": "$",
     "phoneCountryCode": "+673",
-    "phoneRegexp": "^(?:[2-578]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".bn",
     "flag": "🇧🇳",
     "groups": [
@@ -1062,6 +991,7 @@
     ],
     "postalCodeRegexp": "^([A-Z]{2}\\d{4})$",
     "postalCodeFormat": "@@####",
+    "phoneRegexp": "^(?:[2-578]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1085,8 +1015,6 @@
     "currency": "BGN",
     "currencySymbol": "лв",
     "phoneCountryCode": "+359",
-    "phoneRegexp": "^(?:00800\\d{7}|[2-7]\\d{6,7}|[89]\\d{6,8}|2\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".bg",
     "flag": "🇧🇬",
     "groups": [
@@ -1096,6 +1024,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:00800\\d{7}|[2-7]\\d{6,7}|[89]\\d{6,8}|2\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1119,15 +1048,12 @@
     "currency": "XOF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+226",
-    "phoneRegexp": "^(?:(?:[025-7]\\d|44)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".bf",
     "flag": "🇧🇫",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[025-7]\\d|44)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1154,15 +1080,12 @@
     "currency": "BIF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+257",
-    "phoneRegexp": "^(?:(?:[267]\\d|31)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".bi",
     "flag": "🇧🇮",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[267]\\d|31)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1185,8 +1108,6 @@
     "currency": "KHR",
     "currencySymbol": "៛",
     "phoneCountryCode": "+855",
-    "phoneRegexp": "^(?:1\\d{9}|[1-9]\\d{7,8})$",
-    "phoneFormat": "###########",
     "tld": ".kh",
     "flag": "🇰🇭",
     "groups": [
@@ -1195,6 +1116,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:1\\d{9}|[1-9]\\d{7,8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1220,16 +1142,13 @@
     "currency": "XAF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+237",
-    "phoneRegexp": "^(?:[26]\\d{8}|88\\d{6,7})$",
-    "phoneFormat": "###########",
     "tld": ".cm",
     "flag": "🇨🇲",
     "groups": [
       "COMMONWEALTH",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[26]\\d{8}|88\\d{6,7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1254,8 +1173,6 @@
     "currency": "CAD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1",
-    "phoneRegexp": "^(?:[2-9]\\d{9}|3\\d{6})$",
-    "phoneFormat": "(###) ###-####",
     "tld": ".ca",
     "flag": "🇨🇦",
     "groups": [
@@ -1266,8 +1183,10 @@
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
+    "phoneFormat": "(###) ###-####",
     "postalCodeRegexp": "^([ABCEGHJKLMNPRSTVXY]\\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\\d[ABCEGHJKLMNPRSTVWXYZ]\\d)$",
     "postalCodeFormat": "@#@ #@#",
+    "phoneRegexp": "^(?:[2-9]\\d{9}|3\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1290,8 +1209,6 @@
     "currency": "CVE",
     "currencySymbol": "Esc",
     "phoneCountryCode": "+238",
-    "phoneRegexp": "^(?:(?:[2-59]\\d\\d|800)\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".cv",
     "flag": "🇨🇻",
     "groups": [
@@ -1299,6 +1216,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:(?:[2-59]\\d\\d|800)\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1324,13 +1242,10 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+599",
-    "phoneRegexp": "^(?:(?:[34]1|7\\d)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".bq",
     "flag": "🇧🇶",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:(?:[34]1|7\\d)\\d{5})$"
   },
   {
     "alpha2": "KY",
@@ -1346,13 +1261,10 @@
     "currency": "KYD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1345",
-    "phoneRegexp": "^(?:(?:345|[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".ky",
     "flag": "🇰🇾",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:345|[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}, {{{quarter}}}",
@@ -1377,15 +1289,12 @@
     "currency": "XAF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+236",
-    "phoneRegexp": "^(?:8776\\d{4}|(?:[27]\\d|61)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".cf",
     "flag": "🇨🇫",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:8776\\d{4}|(?:[27]\\d|61)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1410,15 +1319,12 @@
     "currency": "XAF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+235",
-    "phoneRegexp": "^(?:(?:22|30|[689]\\d|77)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".td",
     "flag": "🇹🇩",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:22|30|[689]\\d|77)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1442,8 +1348,6 @@
     "currency": "CLP",
     "currencySymbol": "$",
     "phoneCountryCode": "+56",
-    "phoneRegexp": "^(?:12300\\d{6}|6\\d{9,10}|[2-9]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".cl",
     "flag": "🇨🇱",
     "groups": [
@@ -1452,6 +1356,7 @@
     ],
     "postalCodeRegexp": "^(\\d{7})$",
     "postalCodeFormat": "#######",
+    "phoneRegexp": "^(?:12300\\d{6}|6\\d{9,10}|[2-9]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1475,8 +1380,6 @@
     "currency": "CNY",
     "currencySymbol": "¥",
     "phoneCountryCode": "+86",
-    "phoneRegexp": "^(?:(?:(?:1[03-689]|2\\d)\\d\\d|6)\\d{8}|1\\d{10}|[126]\\d{6}(?:\\d(?:\\d{2})?)?|86\\d{5,6}|(?:[3-579]\\d|8[0-57-9])\\d{5,9})$",
-    "phoneFormat": "### #### ####",
     "tld": ".cn",
     "flag": "🇨🇳",
     "groups": [
@@ -1484,8 +1387,10 @@
       "BRICS",
       "ASIA"
     ],
+    "phoneFormat": "### #### ####",
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:(?:(?:1[03-689]|2\\d)\\d\\d|6)\\d{8}|1\\d{10}|[126]\\d{6}(?:\\d(?:\\d{2})?)?|86\\d{5,6}|(?:[3-579]\\d|8[0-57-9])\\d{5,9})$",
     "addressFormat": [
       "{{{postcode}}} {{{country}}}",
       "{{#first}} {{{state_code}}} || {{{state}}} || {{{state_district}}} || {{{region}}}{{/first}}",
@@ -1511,13 +1416,13 @@
     "currency": "AUD",
     "currencySymbol": "$",
     "phoneCountryCode": "+61",
-    "phoneRegexp": "^(?:1(?:[0-79]\\d{8}(?:\\d{2})?|8[0-24-9]\\d{7})|[148]\\d{8}|1\\d{5,7})$",
-    "phoneFormat": "## #### ####",
     "tld": ".cx",
     "flag": "🇨🇽",
     "groups": [],
+    "phoneFormat": "## #### ####",
     "postalCodeRegexp": "^(\\d{4})$",
-    "postalCodeFormat": "####"
+    "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:1(?:[0-79]\\d{8}(?:\\d{2})?|8[0-24-9]\\d{7})|[148]\\d{8}|1\\d{5,7})$"
   },
   {
     "alpha2": "CC",
@@ -1533,13 +1438,11 @@
     "currency": "AUD",
     "currencySymbol": "$",
     "phoneCountryCode": "+61",
-    "phoneRegexp": "^(?:1(?:[0-79]\\d{8}(?:\\d{2})?|8[0-24-9]\\d{7})|[148]\\d{8}|1\\d{5,7})$",
-    "phoneFormat": "## #### ####",
     "tld": ".cc",
     "flag": "🇨🇨",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneFormat": "## #### ####",
+    "phoneRegexp": "^(?:1(?:[0-79]\\d{8}(?:\\d{2})?|8[0-24-9]\\d{7})|[148]\\d{8}|1\\d{5,7})$"
   },
   {
     "alpha2": "CO",
@@ -1555,16 +1458,13 @@
     "currency": "COP",
     "currencySymbol": "$",
     "phoneCountryCode": "+57",
-    "phoneRegexp": "^(?:(?:46|60\\d\\d)\\d{6}|(?:1\\d|[39])\\d{9})$",
-    "phoneFormat": "###########",
     "tld": ".co",
     "flag": "🇨🇴",
     "groups": [
       "OECD",
       "SOUTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:46|60\\d\\d)\\d{6}|(?:1\\d|[39])\\d{9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1591,15 +1491,12 @@
     "currency": "KMF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+269",
-    "phoneRegexp": "^(?:[3478]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".km",
     "flag": "🇰🇲",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[3478]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1624,13 +1521,10 @@
     "currency": "CKD",
     "currencySymbol": "$",
     "phoneCountryCode": "+682",
-    "phoneRegexp": "^(?:[2-578]\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".ck",
     "flag": "🇨🇰",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[2-578]\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1653,8 +1547,6 @@
     "currency": "CRC",
     "currencySymbol": "₡",
     "phoneCountryCode": "+506",
-    "phoneRegexp": "^(?:(?:8\\d|90)\\d{8}|(?:[24-8]\\d{3}|3005)\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".cr",
     "flag": "🇨🇷",
     "groups": [
@@ -1663,6 +1555,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:(?:8\\d|90)\\d{8}|(?:[24-8]\\d{3}|3005)\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1685,8 +1578,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+385",
-    "phoneRegexp": "^(?:[2-69]\\d{8}|80\\d{5,7}|[1-79]\\d{7}|6\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".hr",
     "flag": "🇭🇷",
     "groups": [
@@ -1696,6 +1587,7 @@
     ],
     "postalCodeRegexp": "^(?:HR)*(\\d{5})$",
     "postalCodeFormat": "HR-#####",
+    "phoneRegexp": "^(?:[2-69]\\d{8}|80\\d{5,7}|[1-79]\\d{7}|6\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1719,8 +1611,6 @@
     "currency": "CUC",
     "currencySymbol": "$",
     "phoneCountryCode": "+53",
-    "phoneRegexp": "^(?:(?:[2-7]|8\\d\\d)\\d{7}|[2-47]\\d{6}|[34]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".cu",
     "flag": "🇨🇺",
     "groups": [
@@ -1728,6 +1618,7 @@
     ],
     "postalCodeRegexp": "^(?:CP)*(\\d{5})$",
     "postalCodeFormat": "CP #####",
+    "phoneRegexp": "^(?:(?:[2-7]|8\\d\\d)\\d{7}|[2-47]\\d{6}|[34]\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1753,13 +1644,10 @@
     "currency": "ANG",
     "currencySymbol": "ƒ",
     "phoneCountryCode": "+599",
-    "phoneRegexp": "^(?:(?:[34]1|60|(?:7|9\\d)\\d)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".cw",
     "flag": "🇨🇼",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[34]1|60|(?:7|9\\d)\\d)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1784,8 +1672,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+357",
-    "phoneRegexp": "^(?:(?:[279]\\d|[58]0)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".cy",
     "flag": "🇨🇾",
     "groups": [
@@ -1796,6 +1682,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:(?:[279]\\d|[58]0)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1821,8 +1708,6 @@
     "currency": "CZK",
     "currencySymbol": "Kč",
     "phoneCountryCode": "+420",
-    "phoneRegexp": "^(?:(?:[2-578]\\d|60)\\d{7}|9\\d{8,11})$",
-    "phoneFormat": "###########",
     "tld": ".cz",
     "flag": "🇨🇿",
     "groups": [
@@ -1833,6 +1718,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "### ##",
+    "phoneRegexp": "^(?:(?:[2-578]\\d|60)\\d{7}|9\\d{8,11})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1856,8 +1742,6 @@
     "currency": "DKK",
     "currencySymbol": "kr",
     "phoneCountryCode": "+45",
-    "phoneRegexp": "^(?:[2-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".dk",
     "flag": "🇩🇰",
     "groups": [
@@ -1868,6 +1752,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[2-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1893,15 +1778,12 @@
     "currency": "DJF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+253",
-    "phoneRegexp": "^(?:(?:2\\d|77)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".dj",
     "flag": "🇩🇯",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:2\\d|77)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1924,16 +1806,13 @@
     "currency": "XCD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1767",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|767|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".dm",
     "flag": "🇩🇲",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|767|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1956,8 +1835,6 @@
     "currency": "DOP",
     "currencySymbol": "$",
     "phoneCountryCode": "+1809",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".do",
     "flag": "🇩🇴",
     "groups": [
@@ -1965,6 +1842,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -1996,15 +1874,12 @@
     "currency": "CDF",
     "currencySymbol": "FC",
     "phoneCountryCode": "+243",
-    "phoneRegexp": "^(?:(?:(?:[189]|5\\d)\\d|2)\\d{7}|[1-68]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".cd",
     "flag": "🇨🇩",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:(?:[189]|5\\d)\\d|2)\\d{7}|[1-68]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2027,8 +1902,6 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+593",
-    "phoneRegexp": "^(?:1\\d{9,10}|(?:[2-7]|9\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".ec",
     "flag": "🇪🇨",
     "groups": [
@@ -2036,6 +1909,7 @@
     ],
     "postalCodeRegexp": "^([a-zA-Z]\\d{4}[a-zA-Z])$",
     "postalCodeFormat": "@####@",
+    "phoneRegexp": "^(?:1\\d{9,10}|(?:[2-7]|9\\d)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2059,8 +1933,6 @@
     "currency": "EGP",
     "currencySymbol": "£",
     "phoneCountryCode": "+20",
-    "phoneRegexp": "^(?:[189]\\d{8,9}|[24-6]\\d{8}|[135]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".eg",
     "flag": "🇪🇬",
     "groups": [
@@ -2069,6 +1941,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[189]\\d{8,9}|[24-6]\\d{8}|[135]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2093,8 +1966,6 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+503",
-    "phoneRegexp": "^(?:[25-7]\\d{7}|(?:80\\d|900)\\d{4}(?:\\d{4})?)$",
-    "phoneFormat": "###########",
     "tld": ".sv",
     "flag": "🇸🇻",
     "groups": [
@@ -2102,6 +1973,7 @@
     ],
     "postalCodeRegexp": "^(?:CP)*(\\d{4})$",
     "postalCodeFormat": "CP ####",
+    "phoneRegexp": "^(?:[25-7]\\d{7}|(?:80\\d|900)\\d{4}(?:\\d{4})?)$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2129,16 +2001,13 @@
     "currency": "XAF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+240",
-    "phoneRegexp": "^(?:222\\d{6}|(?:3\\d|55|[89]0)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".gq",
     "flag": "🇬🇶",
     "groups": [
       "OPEC",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:222\\d{6}|(?:3\\d|55|[89]0)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2165,15 +2034,12 @@
     "currency": "ERN",
     "currencySymbol": "Nfk",
     "phoneCountryCode": "+291",
-    "phoneRegexp": "^(?:[178]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".er",
     "flag": "🇪🇷",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[178]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2196,8 +2062,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+372",
-    "phoneRegexp": "^(?:8\\d{9}|[4578]\\d{7}|(?:[3-8]\\d|90)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".ee",
     "flag": "🇪🇪",
     "groups": [
@@ -2208,6 +2072,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:8\\d{9}|[4578]\\d{7}|(?:[3-8]\\d|90)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2233,8 +2098,6 @@
     "currency": "SZL",
     "currencySymbol": "L",
     "phoneCountryCode": "+268",
-    "phoneRegexp": "^(?:0800\\d{4}|(?:[237]\\d|900)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".sz",
     "flag": "🇸🇿",
     "groups": [
@@ -2243,6 +2106,7 @@
     ],
     "postalCodeRegexp": "^([A-Z]\\d{3})$",
     "postalCodeFormat": "@###",
+    "phoneRegexp": "^(?:0800\\d{4}|(?:[237]\\d|900)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2266,8 +2130,6 @@
     "currency": "ETB",
     "currencySymbol": "Br",
     "phoneCountryCode": "+251",
-    "phoneRegexp": "^(?:(?:11|[2-579]\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".et",
     "flag": "🇪🇹",
     "groups": [
@@ -2276,6 +2138,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:(?:11|[2-579]\\d)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2299,15 +2162,12 @@
     "currency": "FKP",
     "currencySymbol": "£",
     "phoneCountryCode": "+500",
-    "phoneRegexp": "^(?:[2-7]\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".fk",
     "flag": "🇫🇰",
     "groups": [
       "SOUTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:[2-7]\\d{4})$"
   },
   {
     "alpha2": "FO",
@@ -2325,13 +2185,12 @@
     "currency": "DKK",
     "currencySymbol": "kr",
     "phoneCountryCode": "+298",
-    "phoneRegexp": "^(?:[2-9]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".fo",
     "flag": "🇫🇴",
     "groups": [],
     "postalCodeRegexp": "^(?:FO)*(\\d{3})$",
     "postalCodeFormat": "FO-###",
+    "phoneRegexp": "^(?:[2-9]\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2358,16 +2217,13 @@
     "currency": "FJD",
     "currencySymbol": "$",
     "phoneCountryCode": "+679",
-    "phoneRegexp": "^(?:45\\d{5}|(?:0800\\d|[235-9])\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".fj",
     "flag": "🇫🇯",
     "groups": [
       "COMMONWEALTH",
       "OCEANIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:45\\d{5}|(?:0800\\d|[235-9])\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2392,8 +2248,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+358",
-    "phoneRegexp": "^(?:[1-35689]\\d{4}|7\\d{10,11}|(?:[124-7]\\d|3[0-46-9])\\d{8}|[1-9]\\d{5,8})$",
-    "phoneFormat": "###########",
     "tld": ".fi",
     "flag": "🇫🇮",
     "groups": [
@@ -2404,6 +2258,7 @@
     ],
     "postalCodeRegexp": "^(?:FI)*(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[1-35689]\\d{4}|7\\d{10,11}|(?:[124-7]\\d|3[0-46-9])\\d{8}|[1-9]\\d{5,8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2427,8 +2282,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+33",
-    "phoneRegexp": "^(?:[1-9]\\d{8})$",
-    "phoneFormat": "## ## ## ## ##",
     "tld": ".fr",
     "flag": "🇫🇷",
     "groups": [
@@ -2439,8 +2292,10 @@
       "G20",
       "EUROPE"
     ],
+    "phoneFormat": "## ## ## ## ##",
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[1-9]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2464,15 +2319,14 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+594",
-    "phoneRegexp": "^(?:(?:[56]94\\d|7093)\\d{5}|(?:80|9\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".gf",
     "flag": "🇬🇫",
     "groups": [
       "SOUTH_AMERICA"
     ],
     "postalCodeRegexp": "^((97|98)3\\d{2})$",
-    "postalCodeFormat": "#####"
+    "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:[56]94\\d|7093)\\d{5}|(?:80|9\\d)\\d{7})$"
   },
   {
     "alpha2": "PF",
@@ -2488,13 +2342,12 @@
     "currency": "XPF",
     "currencySymbol": "₣",
     "phoneCountryCode": "+689",
-    "phoneRegexp": "^(?:4\\d{5}(?:\\d{2})?|8\\d{7,8})$",
-    "phoneFormat": "###########",
     "tld": ".pf",
     "flag": "🇵🇫",
     "groups": [],
     "postalCodeRegexp": "^((97|98)7\\d{2})$",
-    "postalCodeFormat": "#####"
+    "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:4\\d{5}(?:\\d{2})?|8\\d{7,8})$"
   },
   {
     "alpha2": "TF",
@@ -2510,13 +2363,9 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+262",
-    "phoneRegexp": "^\\d{7,15}$",
-    "phoneFormat": "###########",
     "tld": ".tf",
     "flag": "🇹🇫",
-    "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "groups": []
   },
   {
     "alpha2": "GA",
@@ -2532,16 +2381,13 @@
     "currency": "XAF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+241",
-    "phoneRegexp": "^(?:(?:[067]\\d|11)\\d{6}|[2-7]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".ga",
     "flag": "🇬🇦",
     "groups": [
       "OPEC",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[067]\\d|11)\\d{6}|[2-7]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2565,15 +2411,12 @@
     "currency": "GMD",
     "currencySymbol": "D",
     "phoneCountryCode": "+220",
-    "phoneRegexp": "^(?:[2-9]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".gm",
     "flag": "🇬🇲",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[2-9]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2596,8 +2439,6 @@
     "currency": "GEL",
     "currencySymbol": "₾",
     "phoneCountryCode": "+995",
-    "phoneRegexp": "^(?:(?:[3-57]\\d\\d|800)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".ge",
     "flag": "🇬🇪",
     "groups": [
@@ -2606,6 +2447,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:(?:[3-57]\\d\\d|800)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2629,8 +2471,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+49",
-    "phoneRegexp": "^(?:[2579]\\d{5,14}|49(?:[34]0|69|8\\d)\\d\\d?|49(?:37|49|60|7[089]|9\\d)\\d{1,3}|49(?:2[024-9]|3[2-689]|7[1-7])\\d{1,8}|(?:1|[368]\\d|4[0-8])\\d{3,13}|49(?:[015]\\d|2[13]|31|[46][1-8])\\d{1,9})$",
-    "phoneFormat": "### ########",
     "tld": ".de",
     "flag": "🇩🇪",
     "groups": [
@@ -2641,8 +2481,10 @@
       "G20",
       "EUROPE"
     ],
+    "phoneFormat": "### ########",
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[2579]\\d{5,14}|49(?:[34]0|69|8\\d)\\d\\d?|49(?:37|49|60|7[089]|9\\d)\\d{1,3}|49(?:2[024-9]|3[2-689]|7[1-7])\\d{1,8}|(?:1|[368]\\d|4[0-8])\\d{3,13}|49(?:[015]\\d|2[13]|31|[46][1-8])\\d{1,9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2666,16 +2508,13 @@
     "currency": "GHS",
     "currencySymbol": "₵",
     "phoneCountryCode": "+233",
-    "phoneRegexp": "^(?:(?:[235]\\d{3}|800)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".gh",
     "flag": "🇬🇭",
     "groups": [
       "COMMONWEALTH",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[235]\\d{3}|800)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2698,13 +2537,10 @@
     "currency": "GIP",
     "currencySymbol": "£",
     "phoneCountryCode": "+350",
-    "phoneRegexp": "^(?:(?:[25]\\d|60)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".gi",
     "flag": "🇬🇮",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[25]\\d|60)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2727,8 +2563,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+30",
-    "phoneRegexp": "^(?:5005000\\d{3}|8\\d{9,11}|(?:[269]\\d|70)\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".gr",
     "flag": "🇬🇷",
     "groups": [
@@ -2739,6 +2573,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "### ##",
+    "phoneRegexp": "^(?:5005000\\d{3}|8\\d{9,11}|(?:[269]\\d|70)\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2760,13 +2595,12 @@
     "currency": "DKK",
     "currencySymbol": "kr.",
     "phoneCountryCode": "+299",
-    "phoneRegexp": "^(?:(?:19|[2-689]\\d|70)\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".gl",
     "flag": "🇬🇱",
     "groups": [],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:(?:19|[2-689]\\d|70)\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2790,16 +2624,13 @@
     "currency": "XCD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1473",
-    "phoneRegexp": "^(?:(?:473|[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".gd",
     "flag": "🇬🇩",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:473|[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2822,13 +2653,12 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+590",
-    "phoneRegexp": "^(?:(?:590\\d|7090)\\d{5}|(?:69|80|9\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".gp",
     "flag": "🇬🇵",
     "groups": [],
     "postalCodeRegexp": "^((97|98)\\d{3})$",
-    "postalCodeFormat": "#####"
+    "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:590\\d|7090)\\d{5}|(?:69|80|9\\d)\\d{7})$"
   },
   {
     "alpha2": "GU",
@@ -2848,13 +2678,12 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1671",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|671|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".gu",
     "flag": "🇬🇺",
     "groups": [],
     "postalCodeRegexp": "^(969\\d{2})$",
-    "postalCodeFormat": "969##"
+    "postalCodeFormat": "969##",
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|671|900)\\d{7})$"
   },
   {
     "alpha2": "GT",
@@ -2870,8 +2699,6 @@
     "currency": "GTQ",
     "currencySymbol": "Q",
     "phoneCountryCode": "+502",
-    "phoneRegexp": "^(?:80\\d{6}|(?:1\\d{3}|[2-7])\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".gt",
     "flag": "🇬🇹",
     "groups": [
@@ -2879,6 +2706,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:80\\d{6}|(?:1\\d{3}|[2-7])\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2904,13 +2732,13 @@
     "currency": "GBP",
     "currencySymbol": "£",
     "phoneCountryCode": "+44",
-    "phoneRegexp": "^(?:(?:1481|[357-9]\\d{3})\\d{6}|8\\d{6}(?:\\d{2})?)$",
-    "phoneFormat": "#### ######",
     "tld": ".gg",
     "flag": "🇬🇬",
     "groups": [],
+    "phoneFormat": "#### ######",
     "postalCodeRegexp": "^(([A-Z]\\d{2}[A-Z]{2})|([A-Z]\\d{3}[A-Z]{2})|([A-Z]{2}\\d{2}[A-Z]{2})|([A-Z]{2}\\d{3}[A-Z]{2})|([A-Z]\\d[A-Z]\\d[A-Z]{2})|([A-Z]{2}\\d[A-Z]\\d[A-Z]{2})|(GIR0AA))$",
-    "postalCodeFormat": "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA"
+    "postalCodeFormat": "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
+    "phoneRegexp": "^(?:(?:1481|[357-9]\\d{3})\\d{6}|8\\d{6}(?:\\d{2})?)$"
   },
   {
     "alpha2": "GN",
@@ -2926,15 +2754,12 @@
     "currency": "GNF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+224",
-    "phoneRegexp": "^(?:722\\d{6}|(?:3|6\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".gn",
     "flag": "🇬🇳",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:722\\d{6}|(?:3|6\\d)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2959,8 +2784,6 @@
     "currency": "XOF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+245",
-    "phoneRegexp": "^(?:[49]\\d{8}|4\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".gw",
     "flag": "🇬🇼",
     "groups": [
@@ -2968,6 +2791,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[49]\\d{8}|4\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -2991,16 +2815,13 @@
     "currency": "GYD",
     "currencySymbol": "$",
     "phoneCountryCode": "+592",
-    "phoneRegexp": "^(?:(?:[2-8]\\d{3}|9008)\\d{3})$",
-    "phoneFormat": "###########",
     "tld": ".gy",
     "flag": "🇬🇾",
     "groups": [
       "COMMONWEALTH",
       "SOUTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[2-8]\\d{3}|9008)\\d{3})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3025,8 +2846,6 @@
     "currency": "HTG",
     "currencySymbol": "G",
     "phoneCountryCode": "+509",
-    "phoneRegexp": "^(?:[2-589]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".ht",
     "flag": "🇭🇹",
     "groups": [
@@ -3034,6 +2853,7 @@
     ],
     "postalCodeRegexp": "^(?:HT)*(\\d{4})$",
     "postalCodeFormat": "HT####",
+    "phoneRegexp": "^(?:[2-589]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3057,13 +2877,9 @@
     "currency": "",
     "currencySymbol": "",
     "phoneCountryCode": "",
-    "phoneRegexp": "^\\d{7,15}$",
-    "phoneFormat": "###########",
     "tld": ".hm",
     "flag": "🇭🇲",
-    "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "groups": []
   },
   {
     "alpha2": "HN",
@@ -3079,8 +2895,6 @@
     "currency": "HNL",
     "currencySymbol": "L",
     "phoneCountryCode": "+504",
-    "phoneRegexp": "^(?:8\\d{10}|[237-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".hn",
     "flag": "🇭🇳",
     "groups": [
@@ -3088,6 +2902,7 @@
     ],
     "postalCodeRegexp": "^([A-Z]{2}\\d{4})$",
     "postalCodeFormat": "@@####",
+    "phoneRegexp": "^(?:8\\d{10}|[237-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3113,13 +2928,10 @@
     "currency": "HKD",
     "currencySymbol": "$",
     "phoneCountryCode": "+852",
-    "phoneRegexp": "^(?:8[0-46-9]\\d{6,7}|9\\d{4,7}|(?:[2-7]|9\\d{3})\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".hk",
     "flag": "🇭🇰",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:8[0-46-9]\\d{6,7}|9\\d{4,7}|(?:[2-7]|9\\d{3})\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3142,8 +2954,6 @@
     "currency": "HUF",
     "currencySymbol": "Ft",
     "phoneCountryCode": "+36",
-    "phoneRegexp": "^(?:[235-7]\\d{8}|[1-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".hu",
     "flag": "🇭🇺",
     "groups": [
@@ -3154,6 +2964,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[235-7]\\d{8}|[1-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{postcode}}} {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}",
@@ -3175,8 +2986,6 @@
     "currency": "ISK",
     "currencySymbol": "kr",
     "phoneCountryCode": "+354",
-    "phoneRegexp": "^(?:(?:38\\d|[4-9])\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".is",
     "flag": "🇮🇸",
     "groups": [
@@ -3186,6 +2995,7 @@
     ],
     "postalCodeRegexp": "^(\\d{3})$",
     "postalCodeFormat": "###",
+    "phoneRegexp": "^(?:(?:38\\d|[4-9])\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3213,8 +3023,6 @@
     "currency": "INR",
     "currencySymbol": "₹",
     "phoneCountryCode": "+91",
-    "phoneRegexp": "^(?:(?:000800|[2-9]\\d\\d)\\d{7}|1\\d{7,12})$",
-    "phoneFormat": "##### #####",
     "tld": ".in",
     "flag": "🇮🇳",
     "groups": [
@@ -3223,8 +3031,10 @@
       "COMMONWEALTH",
       "ASIA"
     ],
+    "phoneFormat": "##### #####",
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:(?:000800|[2-9]\\d\\d)\\d{7}|1\\d{7,12})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3249,8 +3059,6 @@
     "currency": "IDR",
     "currencySymbol": "Rp",
     "phoneCountryCode": "+62",
-    "phoneRegexp": "^(?:00[1-9]\\d{9,14}|(?:[1-36]|8\\d{5})\\d{6}|00\\d{9}|[1-9]\\d{8,10}|[2-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".id",
     "flag": "🇮🇩",
     "groups": [
@@ -3260,6 +3068,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:00[1-9]\\d{9,14}|(?:[1-36]|8\\d{5})\\d{6}|00\\d{9}|[1-9]\\d{8,10}|[2-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3284,8 +3093,6 @@
     "currency": "IRR",
     "currencySymbol": "﷼",
     "phoneCountryCode": "+98",
-    "phoneRegexp": "^(?:[1-9]\\d{9}|(?:[1-8]\\d\\d|9)\\d{3,4})$",
-    "phoneFormat": "###########",
     "tld": ".ir",
     "flag": "🇮🇷",
     "groups": [
@@ -3295,6 +3102,7 @@
     ],
     "postalCodeRegexp": "^(\\d{10})$",
     "postalCodeFormat": "##########",
+    "phoneRegexp": "^(?:[1-9]\\d{9}|(?:[1-8]\\d\\d|9)\\d{3,4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3323,8 +3131,6 @@
     "currency": "IQD",
     "currencySymbol": "ع.د",
     "phoneCountryCode": "+964",
-    "phoneRegexp": "^(?:(?:1|7\\d\\d)\\d{7}|[2-6]\\d{7,8})$",
-    "phoneFormat": "###########",
     "tld": ".iq",
     "flag": "🇮🇶",
     "groups": [
@@ -3333,6 +3139,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:1|7\\d\\d)\\d{7}|[2-6]\\d{7,8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3359,8 +3166,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+353",
-    "phoneRegexp": "^(?:(?:1\\d|[2569])\\d{6,8}|4\\d{6,9}|7\\d{8}|8\\d{8,9})$",
-    "phoneFormat": "###########",
     "tld": ".ie",
     "flag": "🇮🇪",
     "groups": [
@@ -3368,8 +3173,7 @@
       "OECD",
       "EUROPE"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:1\\d|[2569])\\d{6,8}|4\\d{6,9}|7\\d{8}|8\\d{8,9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3397,13 +3201,13 @@
     "currency": "GBP",
     "currencySymbol": "£",
     "phoneCountryCode": "+44",
-    "phoneRegexp": "^(?:1624\\d{6}|(?:[3578]\\d|90)\\d{8})$",
-    "phoneFormat": "#### ######",
     "tld": ".im",
     "flag": "🇮🇲",
     "groups": [],
+    "phoneFormat": "#### ######",
     "postalCodeRegexp": "^(([A-Z]\\d{2}[A-Z]{2})|([A-Z]\\d{3}[A-Z]{2})|([A-Z]{2}\\d{2}[A-Z]{2})|([A-Z]{2}\\d{3}[A-Z]{2})|([A-Z]\\d[A-Z]\\d[A-Z]{2})|([A-Z]{2}\\d[A-Z]\\d[A-Z]{2})|(GIR0AA))$",
-    "postalCodeFormat": "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA"
+    "postalCodeFormat": "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
+    "phoneRegexp": "^(?:1624\\d{6}|(?:[3578]\\d|90)\\d{8})$"
   },
   {
     "alpha2": "IL",
@@ -3421,8 +3225,6 @@
     "currency": "ILS",
     "currencySymbol": "₪",
     "phoneCountryCode": "+972",
-    "phoneRegexp": "^(?:1\\d{6}(?:\\d{3,5})?|[57]\\d{8}|[1-489]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".il",
     "flag": "🇮🇱",
     "groups": [
@@ -3431,6 +3233,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:1\\d{6}(?:\\d{3,5})?|[57]\\d{8}|[1-489]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3455,8 +3258,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+39",
-    "phoneRegexp": "^(?:0\\d{5,11}|1\\d{8,10}|3(?:[0-8]\\d{7,10}|9\\d{7,8})|(?:43|55|70)\\d{8}|8\\d{5}(?:\\d{2,4})?)$",
-    "phoneFormat": "###########",
     "tld": ".it",
     "flag": "🇮🇹",
     "groups": [
@@ -3469,6 +3270,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:0\\d{5,11}|1\\d{8,10}|3(?:[0-8]\\d{7,10}|9\\d{7,8})|(?:43|55|70)\\d{8}|8\\d{5}(?:\\d{2,4})?)$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3491,15 +3293,12 @@
     "currency": "XOF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+225",
-    "phoneRegexp": "^(?:[02]\\d{9})$",
-    "phoneFormat": "###########",
     "tld": ".ci",
     "flag": "🇨🇮",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[02]\\d{9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3523,16 +3322,13 @@
     "currency": "JMD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1876",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|658|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".jm",
     "flag": "🇯🇲",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|658|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3556,8 +3352,6 @@
     "currency": "JPY",
     "currencySymbol": "¥",
     "phoneCountryCode": "+81",
-    "phoneRegexp": "^(?:00[1-9]\\d{6,14}|[25-9]\\d{9}|(?:00|[1-9]\\d\\d)\\d{6})$",
-    "phoneFormat": "##-####-####",
     "tld": ".jp",
     "flag": "🇯🇵",
     "groups": [
@@ -3566,8 +3360,10 @@
       "G20",
       "ASIA"
     ],
+    "phoneFormat": "##-####-####",
     "postalCodeRegexp": "^(\\d{7})$",
     "postalCodeFormat": "###-####",
+    "phoneRegexp": "^(?:00[1-9]\\d{6,14}|[25-9]\\d{9}|(?:00|[1-9]\\d\\d)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3594,13 +3390,13 @@
     "currency": "GBP",
     "currencySymbol": "£",
     "phoneCountryCode": "+44",
-    "phoneRegexp": "^(?:1534\\d{6}|(?:[3578]\\d|90)\\d{8})$",
-    "phoneFormat": "#### ######",
     "tld": ".je",
     "flag": "🇯🇪",
     "groups": [],
+    "phoneFormat": "#### ######",
     "postalCodeRegexp": "^(([A-Z]\\d{2}[A-Z]{2})|([A-Z]\\d{3}[A-Z]{2})|([A-Z]{2}\\d{2}[A-Z]{2})|([A-Z]{2}\\d{3}[A-Z]{2})|([A-Z]\\d[A-Z]\\d[A-Z]{2})|([A-Z]{2}\\d[A-Z]\\d[A-Z]{2})|(GIR0AA))$",
-    "postalCodeFormat": "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA"
+    "postalCodeFormat": "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
+    "phoneRegexp": "^(?:1534\\d{6}|(?:[3578]\\d|90)\\d{8})$"
   },
   {
     "alpha2": "JO",
@@ -3616,8 +3412,6 @@
     "currency": "JOD",
     "currencySymbol": "د.ا",
     "phoneCountryCode": "+962",
-    "phoneRegexp": "^(?:(?:(?:[2689]|7\\d)\\d|32|427|53)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".jo",
     "flag": "🇯🇴",
     "groups": [
@@ -3625,6 +3419,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:(?:[2689]|7\\d)\\d|32|427|53)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3650,8 +3445,6 @@
     "currency": "KZT",
     "currencySymbol": "₸",
     "phoneCountryCode": "+76",
-    "phoneRegexp": "^(?:8\\d{13}|[78]\\d{9})$",
-    "phoneFormat": "###########",
     "tld": ".kz",
     "flag": "🇰🇿",
     "groups": [
@@ -3659,6 +3452,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:8\\d{13}|[78]\\d{9})$",
     "addressFormat": [
       "{{{country}}}",
       "{{{state}}}",
@@ -3685,8 +3479,6 @@
     "currency": "KES",
     "currencySymbol": "Sh",
     "phoneCountryCode": "+254",
-    "phoneRegexp": "^(?:(?:[17]\\d\\d|900)\\d{6}|(?:2|80)0\\d{6,7}|[4-6]\\d{6,8})$",
-    "phoneFormat": "###########",
     "tld": ".ke",
     "flag": "🇰🇪",
     "groups": [
@@ -3695,6 +3487,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:[17]\\d\\d|900)\\d{6}|(?:2|80)0\\d{6,7}|[4-6]\\d{6,8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3719,16 +3512,13 @@
     "currency": "AUD",
     "currencySymbol": "$",
     "phoneCountryCode": "+686",
-    "phoneRegexp": "^(?:(?:[37]\\d|6[0-79])\\d{6}|(?:[2-48]\\d|50)\\d{3})$",
-    "phoneFormat": "###########",
     "tld": ".ki",
     "flag": "🇰🇮",
     "groups": [
       "COMMONWEALTH",
       "OCEANIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[37]\\d|6[0-79])\\d{6}|(?:[2-48]\\d|50)\\d{3})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3753,15 +3543,12 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+383",
-    "phoneRegexp": "^(?:2\\d{7,8}|3\\d{7,11}|(?:4\\d\\d|[89]00)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": "",
     "flag": "🇽🇰",
     "groups": [
       "EUROPE"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:2\\d{7,8}|3\\d{7,11}|(?:4\\d\\d|[89]00)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3784,8 +3571,6 @@
     "currency": "KWD",
     "currencySymbol": "د.ك",
     "phoneCountryCode": "+965",
-    "phoneRegexp": "^(?:18\\d{5}|(?:[2569]\\d|41)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".kw",
     "flag": "🇰🇼",
     "groups": [
@@ -3794,6 +3579,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:18\\d{5}|(?:[2569]\\d|41)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3820,8 +3606,6 @@
     "currency": "KGS",
     "currencySymbol": "с",
     "phoneCountryCode": "+996",
-    "phoneRegexp": "^(?:8\\d{9}|[235-9]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".kg",
     "flag": "🇰🇬",
     "groups": [
@@ -3829,6 +3613,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:8\\d{9}|[235-9]\\d{8})$",
     "addressFormat": [
       "{{{country}}}",
       "{{{state}}}",
@@ -3853,8 +3638,6 @@
     "currency": "LAK",
     "currencySymbol": "₭",
     "phoneCountryCode": "+856",
-    "phoneRegexp": "^(?:[23]\\d{9}|3\\d{8}|(?:[235-8]\\d|41)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".la",
     "flag": "🇱🇦",
     "groups": [
@@ -3863,6 +3646,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[23]\\d{9}|3\\d{8}|(?:[235-8]\\d|41)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3885,8 +3669,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+371",
-    "phoneRegexp": "^(?:(?:[268]\\d|78|90)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".lv",
     "flag": "🇱🇻",
     "groups": [
@@ -3897,6 +3679,7 @@
     ],
     "postalCodeRegexp": "^(?:LV)*(\\d{4})$",
     "postalCodeFormat": "LV-####",
+    "phoneRegexp": "^(?:(?:[268]\\d|78|90)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -3921,8 +3704,6 @@
     "currency": "LBP",
     "currencySymbol": "ل.ل",
     "phoneCountryCode": "+961",
-    "phoneRegexp": "^(?:[27-9]\\d{7}|[13-9]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".lb",
     "flag": "🇱🇧",
     "groups": [
@@ -3930,6 +3711,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4}(\\d{4})?)$",
     "postalCodeFormat": "#### ####|####",
+    "phoneRegexp": "^(?:[27-9]\\d{7}|[13-9]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}, {{{quarter}}}",
@@ -3954,8 +3736,6 @@
     "currency": "LSL",
     "currencySymbol": "L",
     "phoneCountryCode": "+266",
-    "phoneRegexp": "^(?:(?:[256]\\d\\d|800)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".ls",
     "flag": "🇱🇸",
     "groups": [
@@ -3964,6 +3744,7 @@
     ],
     "postalCodeRegexp": "^(\\d{3})$",
     "postalCodeFormat": "###",
+    "phoneRegexp": "^(?:(?:[256]\\d\\d|800)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}, {{{quarter}}}",
@@ -3986,8 +3767,6 @@
     "currency": "LRD",
     "currencySymbol": "$",
     "phoneCountryCode": "+231",
-    "phoneRegexp": "^(?:(?:[2457]\\d|33|88)\\d{7}|(?:2\\d|[4-6])\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".lr",
     "flag": "🇱🇷",
     "groups": [
@@ -3995,6 +3774,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:(?:[2457]\\d|33|88)\\d{7}|(?:2\\d|[4-6])\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4018,16 +3798,13 @@
     "currency": "LYD",
     "currencySymbol": "ل.د",
     "phoneCountryCode": "+218",
-    "phoneRegexp": "^(?:[2-9]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".ly",
     "flag": "🇱🇾",
     "groups": [
       "OPEC",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[2-9]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4050,15 +3827,14 @@
     "currency": "CHF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+423",
-    "phoneRegexp": "^(?:[68]\\d{8}|(?:[2378]\\d|90)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".li",
     "flag": "🇱🇮",
     "groups": [
       "EUROPE"
     ],
     "postalCodeRegexp": "^(\\d{4})$",
-    "postalCodeFormat": "####"
+    "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[68]\\d{8}|(?:[2378]\\d|90)\\d{5})$"
   },
   {
     "alpha2": "LT",
@@ -4074,8 +3850,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+370",
-    "phoneRegexp": "^(?:(?:[3469]\\d|52|[78]0)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".lt",
     "flag": "🇱🇹",
     "groups": [
@@ -4086,6 +3860,7 @@
     ],
     "postalCodeRegexp": "^(?:LT)*(\\d{5})$",
     "postalCodeFormat": "LT-#####",
+    "phoneRegexp": "^(?:(?:[3469]\\d|52|[78]0)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4113,8 +3888,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+352",
-    "phoneRegexp": "^(?:35[013-9]\\d{4,8}|6\\d{8}|35\\d{2,4}|(?:[2457-9]\\d|3[0-46-9])\\d{2,9})$",
-    "phoneFormat": "###########",
     "tld": ".lu",
     "flag": "🇱🇺",
     "groups": [
@@ -4125,6 +3898,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:35[013-9]\\d{4,8}|6\\d{8}|35\\d{2,4}|(?:[2457-9]\\d|3[0-46-9])\\d{2,9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4150,13 +3924,10 @@
     "currency": "MOP",
     "currencySymbol": "P",
     "phoneCountryCode": "+853",
-    "phoneRegexp": "^(?:0800\\d{3}|(?:28|[68]\\d)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".mo",
     "flag": "🇲🇴",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:0800\\d{3}|(?:28|[68]\\d)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4181,8 +3952,6 @@
     "currency": "MGA",
     "currencySymbol": "Ar",
     "phoneCountryCode": "+261",
-    "phoneRegexp": "^(?:[23]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".mg",
     "flag": "🇲🇬",
     "groups": [
@@ -4190,6 +3959,7 @@
     ],
     "postalCodeRegexp": "^(\\d{3})$",
     "postalCodeFormat": "###",
+    "phoneRegexp": "^(?:[23]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4215,16 +3985,13 @@
     "currency": "MWK",
     "currencySymbol": "MK",
     "phoneCountryCode": "+265",
-    "phoneRegexp": "^(?:(?:[1289]\\d|31|77)\\d{7}|1\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".mw",
     "flag": "🇲🇼",
     "groups": [
       "COMMONWEALTH",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[1289]\\d|31|77)\\d{7}|1\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4249,8 +4016,6 @@
     "currency": "MYR",
     "currencySymbol": "RM",
     "phoneCountryCode": "+60",
-    "phoneRegexp": "^(?:1\\d{8,9}|(?:3\\d|[4-9])\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".my",
     "flag": "🇲🇾",
     "groups": [
@@ -4260,6 +4025,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:1\\d{8,9}|(?:3\\d|[4-9])\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4284,8 +4050,6 @@
     "currency": "MVR",
     "currencySymbol": ".ރ",
     "phoneCountryCode": "+960",
-    "phoneRegexp": "^(?:(?:800|9[0-57-9]\\d)\\d{7}|[34679]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".mv",
     "flag": "🇲🇻",
     "groups": [
@@ -4294,6 +4058,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:800|9[0-57-9]\\d)\\d{7}|[34679]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}, {{{quarter}}}",
@@ -4316,15 +4081,12 @@
     "currency": "XOF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+223",
-    "phoneRegexp": "^(?:[24-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".ml",
     "flag": "🇲🇱",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[24-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4349,8 +4111,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+356",
-    "phoneRegexp": "^(?:3550\\d{4}|(?:[2579]\\d\\d|800)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".mt",
     "flag": "🇲🇹",
     "groups": [
@@ -4360,6 +4120,7 @@
     ],
     "postalCodeRegexp": "^([A-Z]{3}\\d{2}\\d?)$",
     "postalCodeFormat": "@@@ ###|@@@ ##",
+    "phoneRegexp": "^(?:3550\\d{4}|(?:[2579]\\d\\d|800)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4385,15 +4146,12 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+692",
-    "phoneRegexp": "^(?:329\\d{4}|(?:[256]\\d|45)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".mh",
     "flag": "🇲🇭",
     "groups": [
       "OCEANIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:329\\d{4}|(?:[256]\\d|45)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4417,13 +4175,12 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+596",
-    "phoneRegexp": "^(?:(?:596\\d|7091)\\d{5}|(?:69|[89]\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".mq",
     "flag": "🇲🇶",
     "groups": [],
     "postalCodeRegexp": "^(\\d{5})$",
-    "postalCodeFormat": "#####"
+    "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:596\\d|7091)\\d{5}|(?:69|[89]\\d)\\d{7})$"
   },
   {
     "alpha2": "MR",
@@ -4439,15 +4196,12 @@
     "currency": "MRU",
     "currencySymbol": "UM",
     "phoneCountryCode": "+222",
-    "phoneRegexp": "^(?:(?:[2-4]\\d\\d|800)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".mr",
     "flag": "🇲🇷",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[2-4]\\d\\d|800)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4473,16 +4227,13 @@
     "currency": "MUR",
     "currencySymbol": "₨",
     "phoneCountryCode": "+230",
-    "phoneRegexp": "^(?:(?:[57]|8\\d\\d)\\d{7}|[2-468]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".mu",
     "flag": "🇲🇺",
     "groups": [
       "COMMONWEALTH",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[57]|8\\d\\d)\\d{7}|[2-468]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4506,13 +4257,12 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+262",
-    "phoneRegexp": "^(?:7093\\d{5}|(?:80|9\\d)\\d{7}|(?:26|63)9\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".yt",
     "flag": "🇾🇹",
     "groups": [],
     "postalCodeRegexp": "^(\\d{5})$",
-    "postalCodeFormat": "#####"
+    "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:7093\\d{5}|(?:80|9\\d)\\d{7}|(?:26|63)9\\d{6})$"
   },
   {
     "alpha2": "MX",
@@ -4528,8 +4278,6 @@
     "currency": "MXN",
     "currencySymbol": "$",
     "phoneCountryCode": "+52",
-    "phoneRegexp": "^(?:[2-9]\\d{9})$",
-    "phoneFormat": "###########",
     "tld": ".mx",
     "flag": "🇲🇽",
     "groups": [
@@ -4539,6 +4287,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[2-9]\\d{9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4562,8 +4311,6 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+691",
-    "phoneRegexp": "^(?:(?:[39]\\d\\d|820)\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".fm",
     "flag": "🇫🇲",
     "groups": [
@@ -4571,6 +4318,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:[39]\\d\\d|820)\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4594,8 +4342,6 @@
     "currency": "MDL",
     "currencySymbol": "L",
     "phoneCountryCode": "+373",
-    "phoneRegexp": "^(?:(?:[235-7]\\d|[89]0)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".md",
     "flag": "🇲🇩",
     "groups": [
@@ -4603,6 +4349,7 @@
     ],
     "postalCodeRegexp": "^(?:MD)*(\\d{4})$",
     "postalCodeFormat": "MD-####",
+    "phoneRegexp": "^(?:(?:[235-7]\\d|[89]0)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4625,8 +4372,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+377",
-    "phoneRegexp": "^(?:(?:[3489]|[67]\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".mc",
     "flag": "🇲🇨",
     "groups": [
@@ -4634,6 +4379,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:[3489]|[67]\\d)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4657,8 +4403,6 @@
     "currency": "MNT",
     "currencySymbol": "₮",
     "phoneCountryCode": "+976",
-    "phoneRegexp": "^(?:[12]\\d{7,9}|[5-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".mn",
     "flag": "🇲🇳",
     "groups": [
@@ -4666,6 +4410,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:[12]\\d{7,9}|[5-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4690,8 +4435,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+382",
-    "phoneRegexp": "^(?:(?:20|[3-79]\\d)\\d{6}|80\\d{6,7})$",
-    "phoneFormat": "###########",
     "tld": ".me",
     "flag": "🇲🇪",
     "groups": [
@@ -4700,6 +4443,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:20|[3-79]\\d)\\d{6}|80\\d{6,7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4723,13 +4467,10 @@
     "currency": "XCD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1664",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|664|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".ms",
     "flag": "🇲🇸",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|664|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4753,8 +4494,6 @@
     "currency": "MAD",
     "currencySymbol": "د.م.",
     "phoneCountryCode": "+212",
-    "phoneRegexp": "^(?:[5-8]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".ma",
     "flag": "🇲🇦",
     "groups": [
@@ -4762,6 +4501,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[5-8]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4785,8 +4525,6 @@
     "currency": "MZN",
     "currencySymbol": "MT",
     "phoneCountryCode": "+258",
-    "phoneRegexp": "^(?:(?:2|8\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".mz",
     "flag": "🇲🇿",
     "groups": [
@@ -4795,6 +4533,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:(?:2|8\\d)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4817,8 +4556,6 @@
     "currency": "MMK",
     "currencySymbol": "Ks",
     "phoneCountryCode": "+95",
-    "phoneRegexp": "^(?:1\\d{5,7}|95\\d{6}|(?:[4-7]|9[0-46-9])\\d{6,8}|(?:2|8\\d)\\d{5,8})$",
-    "phoneFormat": "###########",
     "tld": ".mm",
     "flag": "🇲🇲",
     "groups": [
@@ -4827,6 +4564,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:1\\d{5,7}|95\\d{6}|(?:[4-7]|9[0-46-9])\\d{6,8}|(?:2|8\\d)\\d{5,8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4862,15 +4600,12 @@
     "currency": "NAD",
     "currencySymbol": "$",
     "phoneCountryCode": "+264",
-    "phoneRegexp": "^(?:[68]\\d{7,8})$",
-    "phoneFormat": "###########",
     "tld": ".na",
     "flag": "🇳🇦",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[68]\\d{7,8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}, {{{quarter}}}",
@@ -4895,16 +4630,13 @@
     "currency": "AUD",
     "currencySymbol": "$",
     "phoneCountryCode": "+674",
-    "phoneRegexp": "^(?:(?:222|444|(?:55|8\\d)\\d|666|777|999)\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".nr",
     "flag": "🇳🇷",
     "groups": [
       "COMMONWEALTH",
       "OCEANIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:222|444|(?:55|8\\d)\\d|666|777|999)\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4927,8 +4659,6 @@
     "currency": "NPR",
     "currencySymbol": "₨",
     "phoneCountryCode": "+977",
-    "phoneRegexp": "^(?:(?:1\\d|9)\\d{9}|[1-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".np",
     "flag": "🇳🇵",
     "groups": [
@@ -4936,6 +4666,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:1\\d|9)\\d{9}|[1-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4959,8 +4690,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+31",
-    "phoneRegexp": "^(?:(?:[124-7]\\d\\d|3(?:[02-9]\\d|1[0-8]))\\d{6}|8\\d{6,9}|9\\d{6,10}|1\\d{4,5})$",
-    "phoneFormat": "###########",
     "tld": ".nl",
     "flag": "🇳🇱",
     "groups": [
@@ -4971,6 +4700,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4}[A-Z]{2})$",
     "postalCodeFormat": "#### @@",
+    "phoneRegexp": "^(?:(?:[124-7]\\d\\d|3(?:[02-9]\\d|1[0-8]))\\d{6}|8\\d{6,9}|9\\d{6,10}|1\\d{4,5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -4994,13 +4724,12 @@
     "currency": "XPF",
     "currencySymbol": "₣",
     "phoneCountryCode": "+687",
-    "phoneRegexp": "^(?:(?:050|[2-57-9]\\d\\d)\\d{3})$",
-    "phoneFormat": "###########",
     "tld": ".nc",
     "flag": "🇳🇨",
     "groups": [],
     "postalCodeRegexp": "^(\\d{5})$",
-    "postalCodeFormat": "#####"
+    "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:050|[2-57-9]\\d\\d)\\d{3})$"
   },
   {
     "alpha2": "NZ",
@@ -5019,8 +4748,6 @@
     "currency": "NZD",
     "currencySymbol": "$",
     "phoneCountryCode": "+64",
-    "phoneRegexp": "^(?:[1289]\\d{9}|50\\d{5}(?:\\d{2,3})?|[27-9]\\d{7,8}|(?:[34]\\d|6[0-35-9])\\d{6}|8\\d{4,6})$",
-    "phoneFormat": "###########",
     "tld": ".nz",
     "flag": "🇳🇿",
     "groups": [
@@ -5030,6 +4757,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[1289]\\d{9}|50\\d{5}(?:\\d{2,3})?|[27-9]\\d{7,8}|(?:[34]\\d|6[0-35-9])\\d{6}|8\\d{4,6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5053,8 +4781,6 @@
     "currency": "NIO",
     "currencySymbol": "C$",
     "phoneCountryCode": "+505",
-    "phoneRegexp": "^(?:(?:1800|[25-8]\\d{3})\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".ni",
     "flag": "🇳🇮",
     "groups": [
@@ -5062,6 +4788,7 @@
     ],
     "postalCodeRegexp": "^(\\d{7})$",
     "postalCodeFormat": "###-###-#",
+    "phoneRegexp": "^(?:(?:1800|[25-8]\\d{3})\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5085,8 +4812,6 @@
     "currency": "XOF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+227",
-    "phoneRegexp": "^(?:[027-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".ne",
     "flag": "🇳🇪",
     "groups": [
@@ -5094,6 +4819,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[027-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5117,8 +4843,6 @@
     "currency": "NGN",
     "currencySymbol": "₦",
     "phoneCountryCode": "+234",
-    "phoneRegexp": "^(?:(?:20|9\\d)\\d{8}|[78]\\d{9,13})$",
-    "phoneFormat": "###########",
     "tld": ".ng",
     "flag": "🇳🇬",
     "groups": [
@@ -5128,6 +4852,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:(?:20|9\\d)\\d{8}|[78]\\d{9,13})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5152,13 +4877,10 @@
     "currency": "NZD",
     "currencySymbol": "$",
     "phoneCountryCode": "+683",
-    "phoneRegexp": "^(?:(?:[4-7]|888\\d)\\d{3})$",
-    "phoneFormat": "###########",
     "tld": ".nu",
     "flag": "🇳🇺",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[4-7]|888\\d)\\d{3})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5182,13 +4904,10 @@
     "currency": "AUD",
     "currencySymbol": "$",
     "phoneCountryCode": "+672",
-    "phoneRegexp": "^(?:[13]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".nf",
     "flag": "🇳🇫",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:[13]\\d{5})$"
   },
   {
     "alpha2": "KP",
@@ -5204,8 +4923,6 @@
     "currency": "KPW",
     "currencySymbol": "₩",
     "phoneCountryCode": "+850",
-    "phoneRegexp": "^(?:85\\d{6}|(?:19\\d|[2-7])\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".kp",
     "flag": "🇰🇵",
     "groups": [
@@ -5213,6 +4930,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "###-###",
+    "phoneRegexp": "^(?:85\\d{6}|(?:19\\d|[2-7])\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5236,8 +4954,6 @@
     "currency": "MKD",
     "currencySymbol": "den",
     "phoneCountryCode": "+389",
-    "phoneRegexp": "^(?:[2-578]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".mk",
     "flag": "🇲🇰",
     "groups": [
@@ -5246,6 +4962,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[2-578]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5272,13 +4989,10 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1670",
-    "phoneRegexp": "^(?:[58]\\d{9}|(?:67|90)0\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".mp",
     "flag": "🇲🇵",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:[58]\\d{9}|(?:67|90)0\\d{7})$"
   },
   {
     "alpha2": "NO",
@@ -5297,8 +5011,6 @@
     "currency": "NOK",
     "currencySymbol": "kr",
     "phoneCountryCode": "+47",
-    "phoneRegexp": "^(?:(?:0|[2-9]\\d{3})\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".no",
     "flag": "🇳🇴",
     "groups": [
@@ -5308,6 +5020,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:(?:0|[2-9]\\d{3})\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5331,8 +5044,6 @@
     "currency": "OMR",
     "currencySymbol": "ر.ع.",
     "phoneCountryCode": "+968",
-    "phoneRegexp": "^(?:(?:1505|[279]\\d{3}|500)\\d{4}|800\\d{5,6})$",
-    "phoneFormat": "###########",
     "tld": ".om",
     "flag": "🇴🇲",
     "groups": [
@@ -5340,6 +5051,7 @@
     ],
     "postalCodeRegexp": "^(\\d{3})$",
     "postalCodeFormat": "###",
+    "phoneRegexp": "^(?:(?:1505|[279]\\d{3}|500)\\d{4}|800\\d{5,6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5366,8 +5078,6 @@
     "currency": "PKR",
     "currencySymbol": "₨",
     "phoneCountryCode": "+92",
-    "phoneRegexp": "^(?:122\\d{6}|[24-8]\\d{10,11}|9(?:[013-9]\\d{8,10}|2(?:[01]\\d\\d|2(?:[06-8]\\d|1[01]))\\d{7})|(?:[2-8]\\d{3}|92(?:[0-7]\\d|8[1-9]))\\d{6}|[24-9]\\d{8}|[89]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".pk",
     "flag": "🇵🇰",
     "groups": [
@@ -5376,6 +5086,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:122\\d{6}|[24-8]\\d{10,11}|9(?:[013-9]\\d{8,10}|2(?:[01]\\d\\d|2(?:[06-8]\\d|1[01]))\\d{7})|(?:[2-8]\\d{3}|92(?:[0-7]\\d|8[1-9]))\\d{6}|[24-9]\\d{8}|[89]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5400,8 +5111,6 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+680",
-    "phoneRegexp": "^(?:(?:[24-8]\\d\\d|345|900)\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".pw",
     "flag": "🇵🇼",
     "groups": [
@@ -5409,6 +5118,7 @@
     ],
     "postalCodeRegexp": "^(96940)$",
     "postalCodeFormat": "96940",
+    "phoneRegexp": "^(?:(?:[24-8]\\d\\d|345|900)\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5432,15 +5142,12 @@
     "currency": "EGP",
     "currencySymbol": "E£",
     "phoneCountryCode": "+970",
-    "phoneRegexp": "^(?:[2489]2\\d{6}|(?:1\\d|5)\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".ps",
     "flag": "🇵🇸",
     "groups": [
       "ASIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:[2489]2\\d{6}|(?:1\\d|5)\\d{8})$"
   },
   {
     "alpha2": "PA",
@@ -5456,15 +5163,12 @@
     "currency": "PAB",
     "currencySymbol": "B/.",
     "phoneCountryCode": "+507",
-    "phoneRegexp": "^(?:(?:00800|8\\d{3})\\d{6}|[68]\\d{7}|[1-57-9]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".pa",
     "flag": "🇵🇦",
     "groups": [
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:00800|8\\d{3})\\d{6}|[68]\\d{7}|[1-57-9]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5493,8 +5197,6 @@
     "currency": "PGK",
     "currencySymbol": "K",
     "phoneCountryCode": "+675",
-    "phoneRegexp": "^(?:(?:180|[78]\\d{3})\\d{4}|(?:[2-589]\\d|64)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".pg",
     "flag": "🇵🇬",
     "groups": [
@@ -5503,6 +5205,7 @@
     ],
     "postalCodeRegexp": "^(\\d{3})$",
     "postalCodeFormat": "###",
+    "phoneRegexp": "^(?:(?:180|[78]\\d{3})\\d{4}|(?:[2-589]\\d|64)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5527,8 +5230,6 @@
     "currency": "PYG",
     "currencySymbol": "₲",
     "phoneCountryCode": "+595",
-    "phoneRegexp": "^(?:[36-8]\\d{5,8}|4\\d{6,8}|59\\d{6}|9\\d{5,10}|(?:2\\d|5[0-8])\\d{6,7})$",
-    "phoneFormat": "###########",
     "tld": ".py",
     "flag": "🇵🇾",
     "groups": [
@@ -5536,6 +5237,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:[36-8]\\d{5,8}|4\\d{6,8}|59\\d{6}|9\\d{5,10}|(?:2\\d|5[0-8])\\d{6,7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5562,8 +5264,6 @@
     "currency": "PEN",
     "currencySymbol": "S/ ",
     "phoneCountryCode": "+51",
-    "phoneRegexp": "^(?:(?:[14-8]|9\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".pe",
     "flag": "🇵🇪",
     "groups": [
@@ -5571,6 +5271,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:[14-8]|9\\d)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5595,8 +5296,6 @@
     "currency": "PHP",
     "currencySymbol": "₱",
     "phoneCountryCode": "+63",
-    "phoneRegexp": "^(?:(?:[2-7]|9\\d)\\d{8}|2\\d{5}|(?:1800|8)\\d{7,9})$",
-    "phoneFormat": "###########",
     "tld": ".ph",
     "flag": "🇵🇭",
     "groups": [
@@ -5605,6 +5304,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:(?:[2-7]|9\\d)\\d{8}|2\\d{5}|(?:1800|8)\\d{7,9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5627,13 +5327,9 @@
     "currency": "NZD",
     "currencySymbol": "$",
     "phoneCountryCode": "+64",
-    "phoneRegexp": "^\\d{7,15}$",
-    "phoneFormat": "###########",
     "tld": ".pn",
     "flag": "🇵🇳",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5655,8 +5351,6 @@
     "currency": "PLN",
     "currencySymbol": "zł",
     "phoneCountryCode": "+48",
-    "phoneRegexp": "^(?:(?:6|8\\d\\d)\\d{7}|[1-9]\\d{6}(?:\\d{2})?|[26]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".pl",
     "flag": "🇵🇱",
     "groups": [
@@ -5667,6 +5361,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "##-###",
+    "phoneRegexp": "^(?:(?:6|8\\d\\d)\\d{7}|[1-9]\\d{6}(?:\\d{2})?|[26]\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5690,8 +5385,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+351",
-    "phoneRegexp": "^(?:1693\\d{5}|(?:[26-9]\\d|30)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".pt",
     "flag": "🇵🇹",
     "groups": [
@@ -5702,6 +5395,7 @@
     ],
     "postalCodeRegexp": "^(\\d{7})$",
     "postalCodeFormat": "####-###",
+    "phoneRegexp": "^(?:1693\\d{5}|(?:[26-9]\\d|30)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5727,13 +5421,12 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1787",
-    "phoneRegexp": "^(?:(?:[589]\\d\\d|787)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".pr",
     "flag": "🇵🇷",
     "groups": [],
     "postalCodeRegexp": "^(\\d{9})$",
-    "postalCodeFormat": "#####-####"
+    "postalCodeFormat": "#####-####",
+    "phoneRegexp": "^(?:(?:[589]\\d\\d|787)\\d{7})$"
   },
   {
     "alpha2": "QA",
@@ -5749,15 +5442,12 @@
     "currency": "QAR",
     "currencySymbol": "ر.ق",
     "phoneCountryCode": "+974",
-    "phoneRegexp": "^(?:800\\d{4}|(?:2|800)\\d{6}|(?:0080|[3-7])\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".qa",
     "flag": "🇶🇦",
     "groups": [
       "ASIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:800\\d{4}|(?:2|800)\\d{6}|(?:0080|[3-7])\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5784,16 +5474,13 @@
     "currency": "XAF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+242",
-    "phoneRegexp": "^(?:222\\d{6}|(?:0\\d|80)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".cg",
     "flag": "🇨🇬",
     "groups": [
       "OPEC",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:222\\d{6}|(?:0\\d|80)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5816,13 +5503,12 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+262",
-    "phoneRegexp": "^(?:709\\d{6}|(?:26|[689]\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".re",
     "flag": "🇷🇪",
     "groups": [],
     "postalCodeRegexp": "^((97|98)(4|7|8)\\d{2})$",
-    "postalCodeFormat": "#####"
+    "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:709\\d{6}|(?:26|[689]\\d)\\d{7})$"
   },
   {
     "alpha2": "RO",
@@ -5838,8 +5524,6 @@
     "currency": "RON",
     "currencySymbol": "lei",
     "phoneCountryCode": "+40",
-    "phoneRegexp": "^(?:(?:[236-8]\\d|90)\\d{7}|[23]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".ro",
     "flag": "🇷🇴",
     "groups": [
@@ -5849,6 +5533,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:(?:[236-8]\\d|90)\\d{7}|[23]\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5872,8 +5557,6 @@
     "currency": "RUB",
     "currencySymbol": "₽",
     "phoneCountryCode": "+73",
-    "phoneRegexp": "^(?:8\\d{13}|[347-9]\\d{9})$",
-    "phoneFormat": "###########",
     "tld": ".ru",
     "flag": "🇷🇺",
     "groups": [
@@ -5884,6 +5567,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:8\\d{13}|[347-9]\\d{9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5913,16 +5597,13 @@
     "currency": "RWF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+250",
-    "phoneRegexp": "^(?:(?:06|[27]\\d\\d|[89]00)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".rw",
     "flag": "🇷🇼",
     "groups": [
       "COMMONWEALTH",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:06|[27]\\d\\d|[89]00)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -5945,13 +5626,11 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+590",
-    "phoneRegexp": "^(?:(?:590\\d|7090)\\d{5}|(?:69|80|9\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".bl",
     "flag": "🇧🇱",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "### ###"
+    "postalCodeFormat": "### ###",
+    "phoneRegexp": "^(?:(?:590\\d|7090)\\d{5}|(?:69|80|9\\d)\\d{7})$"
   },
   {
     "alpha2": "SH",
@@ -5967,13 +5646,12 @@
     "currency": "GBP",
     "currencySymbol": "£",
     "phoneCountryCode": "+290",
-    "phoneRegexp": "^(?:(?:[256]\\d|8)\\d{3})$",
-    "phoneFormat": "###########",
     "tld": ".sh",
     "flag": "🇸🇭",
     "groups": [],
     "postalCodeRegexp": "^(STHL1ZZ)$",
-    "postalCodeFormat": "STHL 1ZZ"
+    "postalCodeFormat": "STHL 1ZZ",
+    "phoneRegexp": "^(?:(?:[256]\\d|8)\\d{3})$"
   },
   {
     "alpha2": "KN",
@@ -5989,16 +5667,13 @@
     "currency": "XCD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1869",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".kn",
     "flag": "🇰🇳",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6021,16 +5696,13 @@
     "currency": "XCD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1758",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|758|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".lc",
     "flag": "🇱🇨",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|758|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6053,13 +5725,11 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+590",
-    "phoneRegexp": "^(?:(?:590\\d|7090)\\d{5}|(?:69|80|9\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".fr",
     "flag": "🇲🇫",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "### ###"
+    "postalCodeFormat": "### ###",
+    "phoneRegexp": "^(?:(?:590\\d|7090)\\d{5}|(?:69|80|9\\d)\\d{7})$"
   },
   {
     "alpha2": "PM",
@@ -6075,13 +5745,12 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+508",
-    "phoneRegexp": "^(?:[45]\\d{5}|(?:708|8\\d\\d)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".pm",
     "flag": "🇵🇲",
     "groups": [],
     "postalCodeRegexp": "^(97500)$",
-    "postalCodeFormat": "#####"
+    "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[45]\\d{5}|(?:708|8\\d\\d)\\d{6})$"
   },
   {
     "alpha2": "VC",
@@ -6097,16 +5766,13 @@
     "currency": "XCD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1784",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|784|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".vc",
     "flag": "🇻🇨",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|784|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6131,16 +5797,13 @@
     "currency": "WST",
     "currencySymbol": "T",
     "phoneCountryCode": "+685",
-    "phoneRegexp": "^(?:(?:[2-6]|8\\d{5})\\d{4}|[78]\\d{6}|[68]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".ws",
     "flag": "🇼🇸",
     "groups": [
       "COMMONWEALTH",
       "OCEANIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[2-6]|8\\d{5})\\d{4}|[78]\\d{6}|[68]\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6163,15 +5826,14 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+378",
-    "phoneRegexp": "^(?:(?:0549|[5-7]\\d)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".sm",
     "flag": "🇸🇲",
     "groups": [
       "EUROPE"
     ],
     "postalCodeRegexp": "^(4789\\d)$",
-    "postalCodeFormat": "4789#"
+    "postalCodeFormat": "4789#",
+    "phoneRegexp": "^(?:(?:0549|[5-7]\\d)\\d{6})$"
   },
   {
     "alpha2": "ST",
@@ -6187,15 +5849,12 @@
     "currency": "STN",
     "currencySymbol": "Db",
     "phoneCountryCode": "+239",
-    "phoneRegexp": "^(?:(?:22|9\\d)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".st",
     "flag": "🇸🇹",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:22|9\\d)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6218,8 +5877,6 @@
     "currency": "SAR",
     "currencySymbol": "ر.س",
     "phoneCountryCode": "+966",
-    "phoneRegexp": "^(?:(?:[15]\\d|800|92)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".sa",
     "flag": "🇸🇦",
     "groups": [
@@ -6230,6 +5887,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:[15]\\d|800|92)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6252,8 +5910,6 @@
     "currency": "XOF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+221",
-    "phoneRegexp": "^(?:(?:[378]\\d|93)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".sn",
     "flag": "🇸🇳",
     "groups": [
@@ -6261,6 +5917,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:[378]\\d|93)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6284,8 +5941,6 @@
     "currency": "RSD",
     "currencySymbol": "дин.",
     "phoneCountryCode": "+381",
-    "phoneRegexp": "^(?:38[02-9]\\d{6,9}|6\\d{7,9}|90\\d{4,8}|38\\d{5,6}|(?:7\\d\\d|800)\\d{3,9}|(?:[12]\\d|3[0-79])\\d{5,10})$",
-    "phoneFormat": "###########",
     "tld": ".rs",
     "flag": "🇷🇸",
     "groups": [
@@ -6293,6 +5948,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:38[02-9]\\d{6,9}|6\\d{7,9}|90\\d{4,8}|38\\d{5,6}|(?:7\\d\\d|800)\\d{3,9}|(?:[12]\\d|3[0-79])\\d{5,10})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6319,16 +5975,13 @@
     "currency": "SCR",
     "currencySymbol": "₨",
     "phoneCountryCode": "+248",
-    "phoneRegexp": "^(?:(?:[2489]\\d|64)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".sc",
     "flag": "🇸🇨",
     "groups": [
       "COMMONWEALTH",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[2489]\\d|64)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6352,16 +6005,13 @@
     "currency": "SLE",
     "currencySymbol": "Le",
     "phoneCountryCode": "+232",
-    "phoneRegexp": "^(?:(?:[237-9]\\d|66)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".sl",
     "flag": "🇸🇱",
     "groups": [
       "COMMONWEALTH",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[237-9]\\d|66)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6390,8 +6040,6 @@
     "currency": "SGD",
     "currencySymbol": "$",
     "phoneCountryCode": "+65",
-    "phoneRegexp": "^(?:(?:(?:1\\d|8)\\d\\d|7000)\\d{7}|[3689]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".sg",
     "flag": "🇸🇬",
     "groups": [
@@ -6401,6 +6049,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:(?:(?:1\\d|8)\\d\\d|7000)\\d{7}|[3689]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}, {{{quarter}}}",
@@ -6426,13 +6075,10 @@
     "currency": "ANG",
     "currencySymbol": "ƒ",
     "phoneCountryCode": "+1721",
-    "phoneRegexp": "^(?:7215\\d{6}|(?:[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".sx",
     "flag": "🇸🇽",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:7215\\d{6}|(?:[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6455,8 +6101,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+421",
-    "phoneRegexp": "^(?:[2-689]\\d{8}|[2-59]\\d{6}|[2-5]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".sk",
     "flag": "🇸🇰",
     "groups": [
@@ -6467,6 +6111,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "###  ##",
+    "phoneRegexp": "^(?:[2-689]\\d{8}|[2-59]\\d{6}|[2-5]\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6489,8 +6134,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+386",
-    "phoneRegexp": "^(?:[1-7]\\d{7}|8\\d{4,7}|90\\d{4,6})$",
-    "phoneFormat": "###########",
     "tld": ".si",
     "flag": "🇸🇮",
     "groups": [
@@ -6501,6 +6144,7 @@
     ],
     "postalCodeRegexp": "^(?:SI)*(\\d{4})$",
     "postalCodeFormat": "SI- ####",
+    "phoneRegexp": "^(?:[1-7]\\d{7}|8\\d{4,7}|90\\d{4,6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6524,16 +6168,13 @@
     "currency": "SBD",
     "currencySymbol": "$",
     "phoneCountryCode": "+677",
-    "phoneRegexp": "^(?:[6-9]\\d{6}|[1-6]\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".sb",
     "flag": "🇸🇧",
     "groups": [
       "COMMONWEALTH",
       "OCEANIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[6-9]\\d{6}|[1-6]\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6558,8 +6199,6 @@
     "currency": "SOS",
     "currencySymbol": "Sh",
     "phoneCountryCode": "+252",
-    "phoneRegexp": "^(?:[346-9]\\d{8}|[12679]\\d{7}|[1-5]\\d{6}|[1348]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".so",
     "flag": "🇸🇴",
     "groups": [
@@ -6567,6 +6206,7 @@
     ],
     "postalCodeRegexp": "^([A-Z]{2}\\d{5})$",
     "postalCodeFormat": "@@  #####",
+    "phoneRegexp": "^(?:[346-9]\\d{8}|[12679]\\d{7}|[1-5]\\d{6}|[1348]\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6609,8 +6249,6 @@
     "currency": "ZAR",
     "currencySymbol": "R",
     "phoneCountryCode": "+27",
-    "phoneRegexp": "^(?:[1-79]\\d{8}|8\\d{4,9})$",
-    "phoneFormat": "###########",
     "tld": ".za",
     "flag": "🇿🇦",
     "groups": [
@@ -6621,6 +6259,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[1-79]\\d{8}|8\\d{4,9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6645,13 +6284,9 @@
     "currency": "GBP",
     "currencySymbol": "£",
     "phoneCountryCode": "+500",
-    "phoneRegexp": "^\\d{7,15}$",
-    "phoneFormat": "###########",
     "tld": ".gs",
     "flag": "🇬🇸",
-    "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "groups": []
   },
   {
     "alpha2": "KR",
@@ -6667,8 +6302,6 @@
     "currency": "KRW",
     "currencySymbol": "₩",
     "phoneCountryCode": "+82",
-    "phoneRegexp": "^(?:00[1-9]\\d{8,11}|(?:[12]|5\\d{3})\\d{7}|[13-6]\\d{9}|(?:[1-6]\\d|80)\\d{7}|[3-6]\\d{4,5}|(?:00|7)0\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".kr",
     "flag": "🇰🇷",
     "groups": [
@@ -6678,6 +6311,7 @@
     ],
     "postalCodeRegexp": "^(?:SEOUL)*(\\d{6})$",
     "postalCodeFormat": "SEOUL ###-###",
+    "phoneRegexp": "^(?:00[1-9]\\d{8,11}|(?:[12]|5\\d{3})\\d{7}|[13-6]\\d{9}|(?:[1-6]\\d|80)\\d{7}|[3-6]\\d{4,5}|(?:00|7)0\\d{8})$",
     "addressFormat": [
       "{{{country}}}",
       "{{{state}}} {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}} {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}} {{{road}}} {{{house_number}}}",
@@ -6699,15 +6333,12 @@
     "currency": "SSP",
     "currencySymbol": "£",
     "phoneCountryCode": "+211",
-    "phoneRegexp": "^(?:[19]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".ss",
     "flag": "🇸🇸",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[19]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6732,8 +6363,6 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+34",
-    "phoneRegexp": "^(?:[5-9]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".es",
     "flag": "🇪🇸",
     "groups": [
@@ -6744,6 +6373,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[5-9]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6768,8 +6398,6 @@
     "currency": "LKR",
     "currencySymbol": "Rs  රු",
     "phoneCountryCode": "+94",
-    "phoneRegexp": "^(?:[1-9]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".lk",
     "flag": "🇱🇰",
     "groups": [
@@ -6778,6 +6406,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[1-9]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6803,8 +6432,6 @@
     "currency": "SDG",
     "currencySymbol": "ج.س",
     "phoneCountryCode": "+249",
-    "phoneRegexp": "^(?:[19]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".sd",
     "flag": "🇸🇩",
     "groups": [
@@ -6812,6 +6439,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[19]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6835,15 +6463,12 @@
     "currency": "SRD",
     "currencySymbol": "$",
     "phoneCountryCode": "+597",
-    "phoneRegexp": "^(?:(?:[2-5]|[6-8]\\d|90)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".sr",
     "flag": "🇸🇷",
     "groups": [
       "SOUTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[2-5]|[6-8]\\d|90)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6867,13 +6492,10 @@
     "currency": "NOK",
     "currencySymbol": "kr",
     "phoneCountryCode": "+4779",
-    "phoneRegexp": "^(?:0\\d{4}|(?:[489]\\d|79)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".sj",
     "flag": "🇸🇯",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:0\\d{4}|(?:[489]\\d|79)\\d{6})$"
   },
   {
     "alpha2": "SE",
@@ -6889,8 +6511,6 @@
     "currency": "SEK",
     "currencySymbol": "kr",
     "phoneCountryCode": "+46",
-    "phoneRegexp": "^(?:(?:[26]\\d\\d|9)\\d{9}|[1-9]\\d{8}|[1-689]\\d{7}|[1-4689]\\d{6}|2\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".se",
     "flag": "🇸🇪",
     "groups": [
@@ -6901,6 +6521,7 @@
     ],
     "postalCodeRegexp": "^(?:SE)*(\\d{5})$",
     "postalCodeFormat": "SE-### ##",
+    "phoneRegexp": "^(?:(?:[26]\\d\\d|9)\\d{9}|[1-9]\\d{8}|[1-689]\\d{7}|[1-4689]\\d{6}|2\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6929,8 +6550,6 @@
     "currency": "CHF",
     "currencySymbol": "Fr.",
     "phoneCountryCode": "+41",
-    "phoneRegexp": "^(?:8\\d{11}|[2-9]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".ch",
     "flag": "🇨🇭",
     "groups": [
@@ -6939,6 +6558,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:8\\d{11}|[2-9]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6961,15 +6581,12 @@
     "currency": "SYP",
     "currencySymbol": "£",
     "phoneCountryCode": "+963",
-    "phoneRegexp": "^(?:[1-359]\\d{8}|[1-5]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".sy",
     "flag": "🇸🇾",
     "groups": [
       "ASIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[1-359]\\d{8}|[1-5]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -6993,13 +6610,12 @@
     "currency": "TWD",
     "currencySymbol": "$",
     "phoneCountryCode": "+886",
-    "phoneRegexp": "^(?:[2-689]\\d{8}|7\\d{9,10}|[2-8]\\d{7}|2\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".tw",
     "flag": "🇹🇼",
     "groups": [],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[2-689]\\d{8}|7\\d{9,10}|[2-8]\\d{7}|2\\d{6})$",
     "addressFormat": [
       "{{{country}}}",
       "{{{postcode}}}",
@@ -7024,8 +6640,6 @@
     "currency": "TJS",
     "currencySymbol": "ЅМ",
     "phoneCountryCode": "+992",
-    "phoneRegexp": "^(?:(?:[0-57-9]\\d|66)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".tj",
     "flag": "🇹🇯",
     "groups": [
@@ -7033,6 +6647,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:(?:[0-57-9]\\d|66)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7058,16 +6673,13 @@
     "currency": "TZS",
     "currencySymbol": "Sh",
     "phoneCountryCode": "+255",
-    "phoneRegexp": "^(?:(?:[25-8]\\d|41|90)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".tz",
     "flag": "🇹🇿",
     "groups": [
       "COMMONWEALTH",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[25-8]\\d|41|90)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7091,8 +6703,6 @@
     "currency": "THB",
     "currencySymbol": "฿",
     "phoneCountryCode": "+66",
-    "phoneRegexp": "^(?:(?:001800|[2-57]|[689]\\d)\\d{7}|1\\d{7,9})$",
-    "phoneFormat": "###########",
     "tld": ".th",
     "flag": "🇹🇭",
     "groups": [
@@ -7101,6 +6711,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:001800|[2-57]|[689]\\d)\\d{7}|1\\d{7,9})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7126,15 +6737,12 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+670",
-    "phoneRegexp": "^(?:7\\d{7}|(?:[2-47]\\d|[89]0)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".tl",
     "flag": "🇹🇱",
     "groups": [
       "ASIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:7\\d{7}|(?:[2-47]\\d|[89]0)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7157,15 +6765,12 @@
     "currency": "XOF",
     "currencySymbol": "Fr",
     "phoneCountryCode": "+228",
-    "phoneRegexp": "^(?:[279]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".tg",
     "flag": "🇹🇬",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[279]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7191,13 +6796,10 @@
     "currency": "NZD",
     "currencySymbol": "$",
     "phoneCountryCode": "+690",
-    "phoneRegexp": "^(?:[2-47]\\d{3,6})$",
-    "phoneFormat": "###########",
     "tld": ".tk",
     "flag": "🇹🇰",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:[2-47]\\d{3,6})$"
   },
   {
     "alpha2": "TO",
@@ -7215,16 +6817,13 @@
     "currency": "TOP",
     "currencySymbol": "T$",
     "phoneCountryCode": "+676",
-    "phoneRegexp": "^(?:(?:0800|(?:[5-8]\\d\\d|999)\\d)\\d{3}|[2-8]\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".to",
     "flag": "🇹🇴",
     "groups": [
       "COMMONWEALTH",
       "OCEANIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:0800|(?:[5-8]\\d\\d|999)\\d)\\d{3}|[2-8]\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7247,16 +6846,13 @@
     "currency": "TTD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1868",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".tt",
     "flag": "🇹🇹",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7280,8 +6876,6 @@
     "currency": "TND",
     "currencySymbol": "د.ت",
     "phoneCountryCode": "+216",
-    "phoneRegexp": "^(?:[2-57-9]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".tn",
     "flag": "🇹🇳",
     "groups": [
@@ -7289,6 +6883,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[2-57-9]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7312,8 +6907,6 @@
     "currency": "TRY",
     "currencySymbol": "₺",
     "phoneCountryCode": "+90",
-    "phoneRegexp": "^(?:4\\d{6}|8\\d{11,12}|(?:[2-58]\\d\\d|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".tr",
     "flag": "🇹🇷",
     "groups": [
@@ -7325,6 +6918,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:4\\d{6}|8\\d{11,12}|(?:[2-58]\\d\\d|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7350,8 +6944,6 @@
     "currency": "TMT",
     "currencySymbol": "m",
     "phoneCountryCode": "+993",
-    "phoneRegexp": "^(?:(?:[1-6]\\d|71)\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".tm",
     "flag": "🇹🇲",
     "groups": [
@@ -7359,6 +6951,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:(?:[1-6]\\d|71)\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7381,13 +6974,12 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1649",
-    "phoneRegexp": "^(?:(?:[58]\\d\\d|649|900)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".tc",
     "flag": "🇹🇨",
     "groups": [],
     "postalCodeRegexp": "^(TKCA 1ZZ)$",
     "postalCodeFormat": "TKCA 1ZZ",
+    "phoneRegexp": "^(?:(?:[58]\\d\\d|649|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7413,16 +7005,13 @@
     "currency": "AUD",
     "currencySymbol": "$",
     "phoneCountryCode": "+688",
-    "phoneRegexp": "^(?:(?:2|7\\d\\d|90)\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".tv",
     "flag": "🇹🇻",
     "groups": [
       "COMMONWEALTH",
       "OCEANIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:2|7\\d\\d|90)\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7448,16 +7037,13 @@
     "currency": "UGX",
     "currencySymbol": "Sh",
     "phoneCountryCode": "+256",
-    "phoneRegexp": "^(?:800\\d{6}|(?:[29]0|[347]\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".ug",
     "flag": "🇺🇬",
     "groups": [
       "COMMONWEALTH",
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:800\\d{6}|(?:[29]0|[347]\\d)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7480,8 +7066,6 @@
     "currency": "UAH",
     "currencySymbol": "₴",
     "phoneCountryCode": "+380",
-    "phoneRegexp": "^(?:[89]\\d{9}|[3-9]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".ua",
     "flag": "🇺🇦",
     "groups": [
@@ -7489,6 +7073,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:[89]\\d{9}|[3-9]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7514,8 +7099,6 @@
     "currency": "AED",
     "currencySymbol": "د.إ",
     "phoneCountryCode": "+971",
-    "phoneRegexp": "^(?:(?:[4-7]\\d|9[0-689])\\d{7}|800\\d{2,9}|[2-4679]\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".ae",
     "flag": "🇦🇪",
     "groups": [
@@ -7523,8 +7106,7 @@
       "OPEC",
       "ASIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:[4-7]\\d|9[0-689])\\d{7}|800\\d{2,9}|[2-4679]\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7549,8 +7131,6 @@
     "currency": "GBP",
     "currencySymbol": "£",
     "phoneCountryCode": "+44",
-    "phoneRegexp": "^(?:[1-357-9]\\d{9}|[18]\\d{8}|8\\d{6})$",
-    "phoneFormat": "#### ######",
     "tld": ".uk",
     "flag": "🇬🇧",
     "groups": [
@@ -7561,8 +7141,10 @@
       "COMMONWEALTH",
       "EUROPE"
     ],
+    "phoneFormat": "#### ######",
     "postalCodeRegexp": "^(([A-Z]\\d{2}[A-Z]{2})|([A-Z]\\d{3}[A-Z]{2})|([A-Z]{2}\\d{2}[A-Z]{2})|([A-Z]{2}\\d{3}[A-Z]{2})|([A-Z]\\d[A-Z]\\d[A-Z]{2})|([A-Z]{2}\\d[A-Z]\\d[A-Z]{2})|(GIR0AA))$",
     "postalCodeFormat": "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
+    "phoneRegexp": "^(?:[1-357-9]\\d{9}|[18]\\d{8}|8\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7587,8 +7169,6 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1201",
-    "phoneRegexp": "^(?:[2-9]\\d{9}|3\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".us",
     "flag": "🇺🇸",
     "groups": [
@@ -7600,6 +7180,7 @@
     ],
     "postalCodeRegexp": "^\\d{5}(-\\d{4})?$",
     "postalCodeFormat": "#####-####",
+    "phoneRegexp": "^(?:[2-9]\\d{9}|3\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7623,13 +7204,9 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+268",
-    "phoneRegexp": "^\\d{7,15}$",
-    "phoneFormat": "###########",
     "tld": ".us",
     "flag": "🇺🇲",
-    "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "groups": []
   },
   {
     "alpha2": "VI",
@@ -7645,13 +7222,10 @@
     "currency": "USD",
     "currencySymbol": "$",
     "phoneCountryCode": "+1340",
-    "phoneRegexp": "^(?:[58]\\d{9}|(?:34|90)0\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".vi",
     "flag": "🇻🇮",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:[58]\\d{9}|(?:34|90)0\\d{7})$"
   },
   {
     "alpha2": "UY",
@@ -7667,8 +7241,6 @@
     "currency": "UYU",
     "currencySymbol": "$",
     "phoneCountryCode": "+598",
-    "phoneRegexp": "^(?:0004\\d{2,9}|[1249]\\d{7}|2\\d{3,4}|(?:[49]\\d|80)\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".uy",
     "flag": "🇺🇾",
     "groups": [
@@ -7676,6 +7248,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:0004\\d{2,9}|[1249]\\d{7}|2\\d{3,4}|(?:[49]\\d|80)\\d{5})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7701,8 +7274,6 @@
     "currency": "UZS",
     "currencySymbol": "so'm",
     "phoneCountryCode": "+998",
-    "phoneRegexp": "^(?:(?:20|33|[5-9]\\d)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".uz",
     "flag": "🇺🇿",
     "groups": [
@@ -7710,6 +7281,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:(?:20|33|[5-9]\\d)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7738,16 +7310,13 @@
     "currency": "VUV",
     "currencySymbol": "Vt",
     "phoneCountryCode": "+678",
-    "phoneRegexp": "^(?:[57-9]\\d{6}|(?:[238]\\d|48)\\d{3})$",
-    "phoneFormat": "###########",
     "tld": ".vu",
     "flag": "🇻🇺",
     "groups": [
       "COMMONWEALTH",
       "OCEANIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[57-9]\\d{6}|(?:[238]\\d|48)\\d{3})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7772,15 +7341,12 @@
     "currency": "EUR",
     "currencySymbol": "€",
     "phoneCountryCode": "+3906698",
-    "phoneRegexp": "^(?:0\\d{5,10}|3[0-8]\\d{7,10}|55\\d{8}|8\\d{5}(?:\\d{2,4})?|(?:1\\d|39)\\d{7,8})$",
-    "phoneFormat": "###########",
     "tld": ".va",
     "flag": "🇻🇦",
     "groups": [
       "EUROPE"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": ""
+    "phoneRegexp": "^(?:0\\d{5,10}|3[0-8]\\d{7,10}|55\\d{8}|8\\d{5}(?:\\d{2,4})?|(?:1\\d|39)\\d{7,8})$"
   },
   {
     "alpha2": "VE",
@@ -7796,8 +7362,6 @@
     "currency": "VES",
     "currencySymbol": "Bs.S.",
     "phoneCountryCode": "+58",
-    "phoneRegexp": "^(?:[68]00\\d{7}|(?:[24]\\d|[59]0)\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".ve",
     "flag": "🇻🇪",
     "groups": [
@@ -7806,6 +7370,7 @@
     ],
     "postalCodeRegexp": "^(\\d{4})$",
     "postalCodeFormat": "####",
+    "phoneRegexp": "^(?:[68]00\\d{7}|(?:[24]\\d|[59]0)\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7828,8 +7393,6 @@
     "currency": "VND",
     "currencySymbol": "₫",
     "phoneCountryCode": "+84",
-    "phoneRegexp": "^(?:[12]\\d{9}|[135-9]\\d{8}|[16]\\d{7}|[16-8]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".vn",
     "flag": "🇻🇳",
     "groups": [
@@ -7838,6 +7401,7 @@
     ],
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
+    "phoneRegexp": "^(?:[12]\\d{9}|[135-9]\\d{8}|[16]\\d{7}|[16-8]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7862,13 +7426,12 @@
     "currency": "XPF",
     "currencySymbol": "₣",
     "phoneCountryCode": "+681",
-    "phoneRegexp": "^(?:(?:40|72|8\\d{4})\\d{4}|[89]\\d{5})$",
-    "phoneFormat": "###########",
     "tld": ".wf",
     "flag": "🇼🇫",
     "groups": [],
     "postalCodeRegexp": "^(986\\d{2})$",
-    "postalCodeFormat": "#####"
+    "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:(?:40|72|8\\d{4})\\d{4}|[89]\\d{5})$"
   },
   {
     "alpha2": "EH",
@@ -7886,13 +7449,10 @@
     "currency": "DZD",
     "currencySymbol": "دج",
     "phoneCountryCode": "+2125288",
-    "phoneRegexp": "^(?:[5-8]\\d{8})$",
-    "phoneFormat": "###########",
     "tld": ".eh",
     "flag": "🇪🇭",
     "groups": [],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:[5-8]\\d{8})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7915,15 +7475,12 @@
     "currency": "YER",
     "currencySymbol": "﷼",
     "phoneCountryCode": "+967",
-    "phoneRegexp": "^(?:(?:1|7\\d)\\d{7}|[1-7]\\d{6})$",
-    "phoneFormat": "###########",
     "tld": ".ye",
     "flag": "🇾🇪",
     "groups": [
       "ASIA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:(?:1|7\\d)\\d{7}|[1-7]\\d{6})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -7946,8 +7503,6 @@
     "currency": "ZMW",
     "currencySymbol": "ZK",
     "phoneCountryCode": "+260",
-    "phoneRegexp": "^(?:800\\d{6}|(?:21|[579]\\d|63)\\d{7})$",
-    "phoneFormat": "###########",
     "tld": ".zm",
     "flag": "🇿🇲",
     "groups": [
@@ -7956,6 +7511,7 @@
     ],
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
+    "phoneRegexp": "^(?:800\\d{6}|(?:21|[579]\\d|63)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
@@ -8001,15 +7557,12 @@
     "currency": "ZWL",
     "currencySymbol": "$",
     "phoneCountryCode": "+263",
-    "phoneRegexp": "^(?:2(?:[0-57-9]\\d{6,8}|6[0-24-9]\\d{6,7})|[38]\\d{9}|[35-8]\\d{8}|[3-6]\\d{7}|[1-689]\\d{6}|[1-3569]\\d{5}|[1356]\\d{4})$",
-    "phoneFormat": "###########",
     "tld": ".zw",
     "flag": "🇿🇼",
     "groups": [
       "AFRICA"
     ],
-    "postalCodeRegexp": "",
-    "postalCodeFormat": "",
+    "phoneRegexp": "^(?:2(?:[0-57-9]\\d{6,8}|6[0-24-9]\\d{6,7})|[38]\\d{9}|[35-8]\\d{8}|[3-6]\\d{7}|[1-689]\\d{6}|[1-3569]\\d{5}|[1356]\\d{4})$",
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",

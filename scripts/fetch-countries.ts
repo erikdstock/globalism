@@ -135,23 +135,25 @@ class CountryDataFetcher {
       .map(country => {
         const currency = this.extractCurrency(country.currencies);
         const phoneCode = this.extractPhoneCode(country.idd);
+        const phoneFormat = this.generatePhoneFormat(phoneCode);
+        const nativeNames = this.extractNativeNames(country.name.nativeName);
 
         const transformed: Country = {
           alpha2: country.cca2.toUpperCase(),
           alpha3: country.cca3.toUpperCase(),
           name: country.name.common,
           officialName: country.name.official,
-          nativeNames: this.extractNativeNames(country.name.nativeName),
+          nativeNames,
           languages: this.extractLanguages(country.languages),
           currency: currency.code,
           currencySymbol: currency.symbol,
           phoneCountryCode: phoneCode,
-          phoneFormat: this.generatePhoneFormat(phoneCode),
           tld: country.tld?.[0] ?? '',
           flag: country.flag ?? '',
           groups: [],
-          postalCodeRegexp: country.postalCode?.regex ?? '',
-          postalCodeFormat: country.postalCode?.format ?? '',
+          ...(phoneFormat !== '###########' && { phoneFormat }),
+          ...(country.postalCode?.regex && { postalCodeRegexp: country.postalCode.regex }),
+          ...(country.postalCode?.format && { postalCodeFormat: country.postalCode.format }),
         };
 
         return transformed;

@@ -96,11 +96,16 @@ describe("phone utilities", () => {
     });
 
     it("should handle malformed regex patterns gracefully", () => {
+      try {
+        jest.spyOn(console, "error").mockImplementation(() => {});
       const badRegexCountry: Country = {
         ...mockCountryUS,
         phoneRegexp: "[invalid regex"
       };
       expect(validatePhoneNumber("1234567890", badRegexCountry)).toBe(false);
+      } finally {
+          jest.spyOn(console, "error").mockRestore();
+        }
     });
   });
 
