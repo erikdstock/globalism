@@ -32,7 +32,8 @@ class CountryDataFetcher {
   async fetchRestCountries(): Promise<RestCountryData[]> {
     console.log('Fetching data from REST Countries API...');
     try {
-      const response = await fetch(`${this.baseUrl}/all`);
+      const fields = 'cca2,cca3,name,currencies,languages,idd,tld,flag,postalCode';
+      const response = await fetch(`${this.baseUrl}/all?fields=${fields}`);
       if (!response.ok) {
         console.log(`Primary endpoint failed (${response.status}), using fallback data...`);
         return this.getFallbackCountryData();
@@ -46,48 +47,8 @@ class CountryDataFetcher {
   }
 
   private getFallbackCountryData(): RestCountryData[] {
-    return [
-      {
-        cca2: 'US', cca3: 'USA',
-        name: { common: 'United States', official: 'United States of America' },
-        currencies: { USD: { name: 'United States dollar', symbol: '$' } },
-        languages: { eng: 'English' },
-        idd: { root: '+1', suffixes: [''] },
-        tld: ['.us'], flag: '🇺🇸',
-      },
-      {
-        cca2: 'CA', cca3: 'CAN',
-        name: { common: 'Canada', official: 'Canada' },
-        currencies: { CAD: { name: 'Canadian dollar', symbol: '$' } },
-        languages: { eng: 'English', fra: 'French' },
-        idd: { root: '+1', suffixes: [''] },
-        tld: ['.ca'], flag: '🇨🇦',
-      },
-      {
-        cca2: 'GB', cca3: 'GBR',
-        name: { common: 'United Kingdom', official: 'United Kingdom of Great Britain and Northern Ireland' },
-        currencies: { GBP: { name: 'British pound', symbol: '£' } },
-        languages: { eng: 'English' },
-        idd: { root: '+44', suffixes: [''] },
-        tld: ['.uk'], flag: '🇬🇧',
-      },
-      {
-        cca2: 'DE', cca3: 'DEU',
-        name: { common: 'Germany', official: 'Federal Republic of Germany' },
-        currencies: { EUR: { name: 'Euro', symbol: '€' } },
-        languages: { deu: 'German' },
-        idd: { root: '+49', suffixes: [''] },
-        tld: ['.de'], flag: '🇩🇪',
-      },
-      {
-        cca2: 'FR', cca3: 'FRA',
-        name: { common: 'France', official: 'French Republic' },
-        currencies: { EUR: { name: 'Euro', symbol: '€' } },
-        languages: { fra: 'French' },
-        idd: { root: '+33', suffixes: [''] },
-        tld: ['.fr'], flag: '🇫🇷',
-      },
-    ];
+    console.error('ERROR: Could not fetch country data from REST Countries API. countries.json will be empty.');
+    return [];
   }
 
   private extractPhoneCode(idd?: { root: string; suffixes: string[] }): string {
@@ -100,8 +61,9 @@ class CountryDataFetcher {
     code: string;
     symbol: string;
   } {
-    if (!currencies) return { code: '', symbol: '' };
-    const [code, currency] = Object.entries(currencies)[0];
+    const entry = currencies && Object.entries(currencies)[0];
+    if (!entry) return { code: '', symbol: '' };
+    const [code, currency] = entry;
     return { code, symbol: currency.symbol ?? '' };
   }
 
@@ -141,29 +103,12 @@ class CountryDataFetcher {
 
   private extractLanguages(languages?: Record<string, string>): string[] {
     if (!languages) return [];
-    return Object.keys(languages).map(key => this.iso3To2[key] ?? key);
+    return Object.keys(languages).map(key => this.iso3To2[key]).filter((code): code is string => !!code);
   }
 
   private extractNativeNames(nativeName?: Record<string, { official: string; common: string }>): string[] {
     if (!nativeName) return [];
     return Object.values(nativeName).map(n => n.common);
-  }
-
-  // Patterns use single-escaped regex strings (correct for JSON storage and new RegExp())
-  private generatePhoneRegex(phoneCode: string): string {
-    const patterns: Record<string, string> = {
-      '+1':  '^\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}$',
-      '+44': '^\\d{4}\\s?\\d{6}$',
-      '+33': '^\\d{2}\\s?\\d{2}\\s?\\d{2}\\s?\\d{2}\\s?\\d{2}$',
-      '+49': '^\\d{3,4}\\s?\\d{7,8}$',
-      '+81': '^\\d{2,3}\\s?\\d{4}\\s?\\d{4}$',
-      '+86': '^\\d{3}\\s?\\d{4}\\s?\\d{4}$',
-      '+91': '^[6-9]\\d{9}$',
-      '+61': '^0?[2-478]\\s?\\d{4}\\s?\\d{4}$',
-      '+55': '^\\(?\\d{2}\\)?\\s?\\d{4,5}[-.\\s]?\\d{4}$',
-      '+7':  '^\\d{10}$',
-    };
-    return patterns[phoneCode] ?? '^\\d{7,15}$';
   }
 
   private generatePhoneFormat(phoneCode: string): string {
@@ -201,7 +146,6 @@ class CountryDataFetcher {
           currency: currency.code,
           currencySymbol: currency.symbol,
           phoneCountryCode: phoneCode,
-          phoneRegexp: this.generatePhoneRegex(phoneCode),
           phoneFormat: this.generatePhoneFormat(phoneCode),
           tld: country.tld?.[0] ?? '',
           flag: country.flag ?? '',

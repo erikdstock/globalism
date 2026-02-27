@@ -1,106 +1,141 @@
-# Globalism
+# globalism
 
-Comprehensive country data and utilities for phone numbers, addresses, and more.
+[![npm version](https://img.shields.io/npm/v/globalism)](https://www.npmjs.com/package/globalism)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](../../LICENSE.md)
 
-## Installation
+Country data and utilities for phone validation, address formatting, and currency display — fully typed, zero runtime dependencies.
 
-```bash
+## Install
+
+```sh
 npm install globalism
 # or
 yarn add globalism
 ```
 
-## Usage
-
-### Basic Country Data
+## Quick start
 
 ```typescript
-import { countries, Country } from 'globalism';
+import {
+  findCountryByAlpha2,
+  analyzePhoneNumber,
+  formatAddressLines,
+  formatCurrency,
+} from 'globalism';
 
-// Get all countries
-console.log(countries);
+const us = findCountryByAlpha2('US');
 
-// Find a specific country
-const us = countries.find(c => c.alpha2 === 'US');
-```
+// Phone
+analyzePhoneNumber('4155552671', us);
+// → { status: 'complete', formatted: '(415) 555-2671', international: '+1 (415) 555-2671', ... }
 
-### Phone Number Utilities
+// Address
+formatAddressLines(
+  { recipient: 'Jane Smith', house_number: '123', road: 'Main St',
+    city: 'Springfield', state_code: 'IL', postcode: '62701' },
+  us
+);
+// → ['Jane Smith', '123 Main St', 'Springfield, IL 62701', 'United States']
 
-```typescript
-import { analyzePhoneNumber, validatePhoneNumber, formatPhoneNumber } from 'globalism';
-
-const country = countries.find(c => c.alpha2 === 'US');
-
-// Analyze a phone number (returns status, formatted, original, international)
-const result = analyzePhoneNumber('5551234567', country);
-console.log(result);
-// {
-//   status: 'complete',
-//   formatted: '(555) 123-4567',
-//   original: '5551234567',
-//   international: '+1 (555) 123-4567'
-// }
-
-// Validate a phone number
-const isValid = validatePhoneNumber('(555) 123-4567', country);
-
-// Format a phone number
-const formatted = formatPhoneNumber('5551234567', country);
-```
-
-### Country Lookups
-
-```typescript
-import { findCountryByAlpha2, findCountryByAlpha3, findCountryByName } from 'globalism';
-
-const country = findCountryByAlpha2('US');
-const country2 = findCountryByAlpha3('USA');
-const country3 = findCountryByName('United States');
+// Currency
+formatCurrency(1234.56, us); // → '$1,234.56'
 ```
 
 ## API
 
-### Types
+### Data
 
-#### `Country`
-- `alpha2: string` - ISO 3166-1 alpha-2 code
-- `alpha3: string` - ISO 3166-1 alpha-3 code
-- `name: string` - Country name
-- `officialName: string` - Official country name
-- `flag: string` - Flag emoji
-- `phoneCountryCode: string` - Phone country code (e.g., "+1")
-- `phoneRegexp?: string` - Phone validation regex
-- `phoneFormat?: string` - Phone format template (e.g., "(###) ###-####")
-- `currency: string` - Currency code
-- `currencySymbol: string` - Currency symbol
-- `languages: string[]` - Language codes
-- `tld: string` - Top-level domain
+| Export | Description |
+|---|---|
+| `countries` | Array of 250 `Country` objects |
+| `countryGroups` | Regional/political groupings (UN regions, EU, etc.) |
+| `languages` | ISO 639-1 language list (184 languages) |
 
-#### `PhoneNumberStatus`
-- `'empty'` - No digits entered
-- `'partial'` - Partially complete number
-- `'complete'` - Valid complete number
-- `'invalid'` - Invalid number (too long, wrong format, etc.)
+### Lookups
 
-#### `PhoneNumberState`
-- `status: PhoneNumberStatus` - Current status
-- `formatted: string` - Formatted version
-- `original: string` - Original input
-- `international: string` - International format with country code
+| Export | Description |
+|---|---|
+| `findCountryByAlpha2(code)` | Look up a country by 2-letter ISO code |
+| `findCountryByAlpha3(code)` | Look up a country by 3-letter ISO code |
+| `findCountriesByGroup(groupId)` | All countries belonging to a group |
+| `findGroupById(id)` | Look up a country group by ID |
+| `findLanguageByCode(code)` | Look up a language by ISO 639-1 code |
 
-### Functions
+### Phone
 
-#### `analyzePhoneNumber(phoneNumber: string, country: Country): PhoneNumberState`
-Analyzes a phone number and returns comprehensive state information.
+| Export | Description |
+|---|---|
+| `analyzePhoneNumber(number, country)` | Returns `PhoneNumberState` with status, formatted, and international forms |
+| `validatePhoneNumber(number, country)` | Returns `boolean` |
+| `formatPhoneNumber(number, country)` | Returns formatted string |
+| `generatePhonePlaceholder(country)` | Returns a `#`-masked placeholder string |
 
-#### `validatePhoneNumber(phoneNumber: string, country: Country): boolean`
-Validates if a phone number matches the country's format.
+**`PhoneNumberState`**
+```typescript
+{
+  status: 'empty' | 'partial' | 'complete' | 'invalid';
+  formatted: string;      // e.g. "(415) 555-2671"
+  original: string;       // original input
+  international: string;  // e.g. "+1 (415) 555-2671"
+}
+```
 
-#### `formatPhoneNumber(phoneNumber: string, country: Country, allowPartial?: boolean): string`
-Formats a phone number according to the country's format.
+### Address
 
-#### `generatePhonePlaceholder(country: Country): string | null`
-Generates a placeholder string for phone input fields.
+| Export | Description |
+|---|---|
+| `formatAddress(components, country)` | Format as a newline-joined string |
+| `formatAddressLines(components, country)` | Format as `string[]`, one line per element |
+| `getRequiredAddressComponents(country)` | Fields required by the country's template |
+
+Address templates are sourced from [OpenCageData address-formatting](https://github.com/OpenCageData/address-formatting) and use a Handlebars-style subset with `{{field}}`, `{{{field}}}`, and `{{#first}}a || b{{/first}}` syntax.
+
+**`AddressComponents`** (all fields optional)
+```typescript
+{
+  recipient?, house_number?, house?, road?, neighbourhood?, suburb?,
+  city_district?, city?, postal_town?, county?, state_code?, state?,
+  postcode?, country?, country_code?
+}
+```
+
+### Currency
+
+| Export | Description |
+|---|---|
+| `formatCurrency(amount, country)` | Format using `Intl.NumberFormat` |
+| `formatCurrencyWithOptions(amount, country, options?)` | With custom `Intl.NumberFormatOptions` |
+| `getCurrencySymbol(country)` | Return the currency symbol |
+| `formatCurrencyParts(amount, country)` | Return `Intl.NumberFormatPart[]` for custom rendering |
+
+### `Country` shape
+
+```typescript
+{
+  alpha2: string;           // 'US'
+  alpha3: string;           // 'USA'
+  name: string;             // 'United States'
+  officialName: string;     // 'United States of America'
+  flag: string;             // '🇺🇸'
+  currency: string;         // 'USD'
+  currencySymbol: string;   // '$'
+  languages: string[];      // ['en']
+  phoneCountryCode: string; // '+1'
+  phoneRegexp?: string;     // national number pattern (libphonenumber-js)
+  phoneFormat?: string;     // '#'-masked template, e.g. '(###) ###-####'
+  tld: string;              // '.us'
+  addressFormat?: string[]; // OpenCageData Mustache template lines
+  groups: string[];         // group IDs this country belongs to
+  postalCodeRegexp?: string;
+  postalCodeFormat?: string;
+}
+```
+
+## Data sources
+
+- Country data: [REST Countries](https://restcountries.com) — CC BY-SA 4.0
+- Phone patterns: [libphonenumber-js](https://github.com/catamphetamine/libphonenumber-js) (MIT), data from [Google libphonenumber](https://github.com/google/libphonenumber) — Apache 2.0
+- Address templates: [OpenCageData address-formatting](https://github.com/OpenCageData/address-formatting) — BSD 2-Clause
 
 ## License
 

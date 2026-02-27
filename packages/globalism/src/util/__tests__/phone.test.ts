@@ -195,12 +195,17 @@ describe("phone utilities", () => {
     });
 
     it("should return invalid status for malformed complete numbers", () => {
-      const badRegexCountry: Country = {
-        ...mockCountryUS,
-        phoneRegexp: "[invalid regex"
-      };
-      const result = analyzePhoneNumber("5551234567", badRegexCountry);
-      expect(result.status).toBe("invalid");
+      const spy = jest.spyOn(console, "error").mockImplementation(() => {});
+      try {
+        const badRegexCountry: Country = {
+          ...mockCountryUS,
+          phoneRegexp: "[invalid regex"
+        };
+        const result = analyzePhoneNumber("5551234567", badRegexCountry);
+        expect(result.status).toBe("invalid");
+      } finally {
+        spy.mockRestore();
+      }
     });
 
     it("should return invalid status when country has no format", () => {
