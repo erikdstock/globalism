@@ -1,30 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# globalism
 
-## Getting Started
+[![npm version](https://img.shields.io/npm/v/globalism)](https://www.npmjs.com/package/globalism)
+[![Deploy Demo](https://github.com/erikdstock/globalism/actions/workflows/deploy.yml/badge.svg)](https://github.com/erikdstock/globalism/actions/workflows/deploy.yml)
+[![Update Country Data](https://github.com/erikdstock/globalism/actions/workflows/update-data.yml/badge.svg)](https://github.com/erikdstock/globalism/actions/workflows/update-data.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 
-First, run the development server:
+Country data and utilities for phone validation, address formatting, and currency display — fully typed, zero runtime dependencies.
 
-```bash
-yarn dev
+**[Live demo →](https://erikdstock.github.io/globalism/)**
+
+---
+
+## Install
+
+```sh
+npm install globalism
+# or
+yarn add globalism
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```typescript
+import {
+  countries,
+  findCountryByAlpha2,
+  formatAddressLines,
+  formatCurrency,
+  analyzePhoneNumber,
+} from 'globalism';
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+// Country lookup
+const us = findCountryByAlpha2('US');
 
-## Learn More
+// Phone validation
+const result = analyzePhoneNumber('+14155552671', us);
+// → { status: 'valid', formatted: '+1 415 555 2671', ... }
 
-To learn more about Next.js, take a look at the following resources:
+// Address formatting
+const lines = formatAddressLines(
+  { recipient: 'Jane Smith', road: 'Main St', house_number: '123', city: 'Springfield', state_code: 'IL', postcode: '62701' },
+  us
+);
+// → ['Jane Smith', '123 Main St', 'Springfield, IL 62701', 'United States']
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+// Currency formatting
+formatCurrency(1234.56, us); // → '$1,234.56'
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Packages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This repository is a Yarn workspaces monorepo with two packages.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### `packages/globalism` — the library
+
+The publishable NPM package. Data is stored as committed JSON files in `src/data/raw/` and updated by the scripts below.
+
+**Exports:**
+
+| Export | Description |
+|---|---|
+| `countries` | Array of ~250 `Country` objects |
+| `countryGroups` | Regional/political groupings (UN regions, EU, etc.) |
+| `languages` | ISO 639-1 language list |
+| `findCountryByAlpha2(code)` | Look up a country by its 2-letter ISO code |
+| `findCountryByAlpha3(code)` | Look up a country by its 3-letter ISO code |
+| `findCountriesByGroup(groupId)` | All countries in a group |
+| `findGroupById(id)` | Look up a country group |
+| `findLanguageByCode(code)` | Look up a language by ISO 639-1 code |
+| `analyzePhoneNumber(number, country)` | Validate and format a phone number |
+| `formatAddress(components, country)` | Format an address as a newline-joined string |
+| `formatAddressLines(components, country)` | Format an address as a `string[]` |
+| `getRequiredAddressComponents(country)` | Fields needed by a country's address template |
+| `formatCurrency(amount, country)` | Format a number as currency (`Intl.NumberFormat`) |
+| `formatCurrencyWithOptions(amount, country, options?)` | Currency with custom `Intl` options |
+| `getCurrencySymbol(country)` | Return the currency symbol for a country |
+| `formatCurrencyParts(amount, country)` | Return `Intl.NumberFormatPart[]` for custom rendering |
+
+**`Country` object shape (excerpt):**
+
+```typescript
+{
+  alpha2: 'US',
+  alpha3: 'USA',
+  name: 'United States',
+  flag: '🇺🇸',
+  currency: 'USD',
+  currencySymbol: '$',
+  languages: ['en'],
+  phoneCode: '+1',
+  phoneRegexp: '^\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}$',
+  addressFormat: [             // OpenCageData Mustache template, one line per element
+    '{{recipient}}',
+    '{{house_number}} {{road}}',
+    '{{city}}, {{state_code}} {{postcode}}',
+    '{{country}}',
+  ],
+  groups: ['northern-america', 'americas', ...],
+}
+```
+
+### `packages/demo` — the demo site
+
+A statically exported Next.js site deployed to GitHub Pages. Serves as both interactive documentation and a live demo of the library's utilities.
+
+Pages:
+- `/` — overview, install instructions, quick-start
+- `/phone` — phone number validator with per-country dial codes
+- `/address` — address formatter with dynamic fields per country template
+- `/currency` — currency formatter with locale-aware output
+
+---
+
+## Development
+
+```sh
+yarn install
+
+# Run the demo locally
+yarn dev
+
+# Run tests
+yarn test
+
+# Build the library
+yarn workspace globalism build
+```
+
+### Data pipeline
+
+Country data is fetched from [REST Countries](https://restcountries.com) and [OpenCageData address-formatting](https://github.com/OpenCageData/address-formatting) and committed to `packages/globalism/src/data/raw/`. Scripts live in `scripts/`.
+
+```sh
+# Update all data sources
+yarn update-data
+
+# Or run individual steps
+yarn update-countries
+yarn update-languages
+yarn update-address-formats
+yarn update-groups
+yarn validate-data
+```
+
+The `Update Country Data` GitHub Actions workflow runs this pipeline monthly and opens a PR with any changes.
+
+---
+
+## Data sources and licenses
+
+- Country data: [REST Countries](https://restcountries.com) — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- Address templates: [OpenCageData address-formatting](https://github.com/OpenCageData/address-formatting) — [BSD 2-Clause](https://github.com/OpenCageData/address-formatting/blob/master/LICENSE)
+
+The `globalism` library itself is MIT licensed.
