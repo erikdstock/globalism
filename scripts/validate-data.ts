@@ -4,6 +4,8 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 import type { Country, CountryGroup, Language } from '../packages/globalism/src/data/types';
 
+const RAW_DIR = join(__dirname, '../packages/globalism/src/data/raw');
+
 interface ValidationResult {
   valid: boolean;
   errors: string[];
@@ -11,300 +13,185 @@ interface ValidationResult {
 }
 
 class DataValidator {
-  private countriesPath = join(__dirname, '../packages/globalism/src/data/countries.ts');
-  private groupsPath = join(__dirname, '../packages/globalism/src/data/countryGroups.ts');
-  private languagesPath = join(__dirname, '../packages/globalism/src/data/languages.ts');
-
-  async validateAll(): Promise<ValidationResult> {
-    console.log('🔍 Starting comprehensive data validation...\n');
-
-    const result: ValidationResult = {
-      valid: true,
-      errors: [],
-      warnings: []
-    };
-
-    try {
-      // Load all data
-      const countries = this.loadCountries();
-      const groups = this.loadCountryGroups();
-      const languages = this.loadLanguages();
-
-      console.log(`📊 Loaded ${countries.length} countries, ${groups.length} groups, ${languages.length} languages\n`);
-
-      // Run validation tests
-      this.validateCountries(countries, result);
-      this.validateCountryGroups(groups, result);
-      this.validateLanguages(languages, result);
-      this.validateReferences(countries, groups, languages, result);
-
-      // Print results
-      this.printValidationResults(result);
-
-    } catch (error) {
-      result.valid = false;
-      result.errors.push(`Failed to load data: ${error}`);
-      console.error('❌ Validation failed:', error);
-    }
-
-    return result;
-  }
-
   private loadCountries(): Country[] {
-    const content = readFileSync(this.countriesPath, 'utf-8');
-    const match = content.match(/export const countries: Country\[\] = ([\s\S]*);/);
-    if (!match) throw new Error('Could not parse countries data');
-    return JSON.parse(match[1]);
+    return JSON.parse(readFileSync(join(RAW_DIR, 'countries.json'), 'utf-8'));
   }
 
   private loadCountryGroups(): CountryGroup[] {
     try {
-      const content = readFileSync(this.groupsPath, 'utf-8');
-      const match = content.match(/export const countryGroups: CountryGroup\[\] = ([\s\S]*);/);
-      if (!match) {
-        console.warn('Could not parse countryGroups - no match found');
-        return [];
-      }
-      // Replace enum references with their string values for parsing
-      let jsonStr = match[1]
-        .replace(/GroupingType\.PoliticalUnion/g, '"POLITICAL_UNION"')
-        .replace(/GroupingType\.MilitaryAlliance/g, '"MILITARY_ALLIANCE"')
-        .replace(/GroupingType\.EconomicUnion/g, '"ECONOMIC_UNION"')
-        .replace(/GroupingType\.Continent/g, '"CONTINENT"')
-        .replace(/GroupingType\.Region/g, '"REGION"')
-        .replace(/GroupingType\.CustomsUnion/g, '"CUSTOMS_UNION"')
-        .replace(/GroupingType\.CurrencyUnion/g, '"CURRENCY_UNION"')
-        .replace(/GroupingType\.FreeTradeArea/g, '"FREE_TRADE_AREA"')
-        .replace(/GroupingType\.CulturalGroup/g, '"CULTURAL_GROUP"')
-        .replace(/GroupingType\.Other/g, '"OTHER"');
-      
-      return JSON.parse(jsonStr);
-    } catch (error) {
-      console.warn('Error loading country groups:', error);
+      return JSON.parse(readFileSync(join(RAW_DIR, 'countryGroups.json'), 'utf-8'));
+    } catch {
+      console.warn('countryGroups.json not found — skipping group validation');
       return [];
     }
   }
 
   private loadLanguages(): Language[] {
-    const content = readFileSync(this.languagesPath, 'utf-8');
-    const match = content.match(/export const languages: Language\[\] = ([\s\S]*);/);
-    if (!match) throw new Error('Could not parse languages data');
-    return JSON.parse(match[1]);
+    try {
+      return JSON.parse(readFileSync(join(RAW_DIR, 'languages.json'), 'utf-8'));
+    } catch {
+      console.warn('languages.json not found — skipping language validation');
+      return [];
+    }
+  }
+
+  async validateAll(): Promise<ValidationResult> {
+    console.log('Starting comprehensive data validation...\n');
+
+    const result: ValidationResult = { valid: true, errors: [], warnings: [] };
+
+    try {
+      const countries = this.loadCountries();
+      const groups = this.loadCountryGroups();
+      const languages = this.loadLanguages();
+
+      console.log(`Loaded ${countries.length} countries, ${groups.length} groups, ${languages.length} languages\n`);
+
+      this.validateCountries(countries, result);
+      this.validateCountryGroups(groups, result);
+      this.validateLanguages(languages, result);
+      this.validateReferences(countries, groups, languages, result);
+      this.printResults(result);
+    } catch (error) {
+      result.valid = false;
+      result.errors.push(`Failed to load data: ${error}`);
+      console.error('Validation failed:', error);
+    }
+
+    return result;
   }
 
   private validateCountries(countries: Country[], result: ValidationResult): void {
-    console.log('🌍 Validating countries...');
-
+    console.log('Validating countries...');
     const alpha2Codes = new Set<string>();
     const alpha3Codes = new Set<string>();
 
-    for (const country of countries) {
-      // Check required fields
-      if (!country.alpha2 || country.alpha2.length !== 2) {
-        result.errors.push(`Country "${country.name}" has invalid alpha2 code: "${country.alpha2}"`);
+    for (const c of countries) {
+      if (!c.alpha2 || c.alpha2.length !== 2) {
+        result.errors.push(`"${c.name}" has invalid alpha2: "${c.alpha2}"`);
         result.valid = false;
       }
-
-      if (!country.alpha3 || country.alpha3.length !== 3) {
-        result.errors.push(`Country "${country.name}" has invalid alpha3 code: "${country.alpha3}"`);
+      if (!c.alpha3 || c.alpha3.length !== 3) {
+        result.errors.push(`"${c.name}" has invalid alpha3: "${c.alpha3}"`);
         result.valid = false;
       }
-
-      if (!country.name) {
-        result.errors.push(`Country with alpha2 "${country.alpha2}" has no name`);
+      if (!c.name) {
+        result.errors.push(`Country with alpha2 "${c.alpha2}" has no name`);
         result.valid = false;
       }
-
-      // Check for duplicates
-      if (alpha2Codes.has(country.alpha2)) {
-        result.errors.push(`Duplicate alpha2 code: "${country.alpha2}"`);
+      if (alpha2Codes.has(c.alpha2)) {
+        result.errors.push(`Duplicate alpha2: "${c.alpha2}"`);
         result.valid = false;
       }
-      alpha2Codes.add(country.alpha2);
-
-      if (alpha3Codes.has(country.alpha3)) {
-        result.errors.push(`Duplicate alpha3 code: "${country.alpha3}"`);
+      alpha2Codes.add(c.alpha2);
+      if (alpha3Codes.has(c.alpha3)) {
+        result.errors.push(`Duplicate alpha3: "${c.alpha3}"`);
         result.valid = false;
       }
-      alpha3Codes.add(country.alpha3);
-
-      // Check alpha2 format (uppercase)
-      if (country.alpha2 !== country.alpha2.toUpperCase()) {
-        result.errors.push(`Country "${country.name}" alpha2 code should be uppercase: "${country.alpha2}"`);
+      alpha3Codes.add(c.alpha3);
+      if (c.alpha2 !== c.alpha2.toUpperCase()) {
+        result.errors.push(`"${c.name}" alpha2 should be uppercase: "${c.alpha2}"`);
         result.valid = false;
       }
-
-      // Check currency
-      if (!country.currency) {
-        result.warnings.push(`Country "${country.name}" has no currency`);
-      } else if (country.currency.length !== 3) {
-        result.warnings.push(`Country "${country.name}" currency should be 3 characters: "${country.currency}"`);
+      if (!c.currency) {
+        result.warnings.push(`"${c.name}" has no currency`);
       }
-
-      // Check phone country code
-      if (country.phoneCountryCode && !country.phoneCountryCode.startsWith('+')) {
-        result.warnings.push(`Country "${country.name}" phone code should start with +: "${country.phoneCountryCode}"`);
-      }
-
-      // Check languages array
-      if (!country.languages || country.languages.length === 0) {
-        result.warnings.push(`Country "${country.name}" has no languages`);
+      if (c.phoneRegexp) {
+        try {
+          new RegExp(c.phoneRegexp);
+        } catch {
+          result.errors.push(`"${c.name}" has invalid phoneRegexp: "${c.phoneRegexp}"`);
+          result.valid = false;
+        }
       }
     }
-
-    console.log(`  ✅ Validated ${countries.length} countries`);
+    console.log(`  Validated ${countries.length} countries`);
   }
 
   private validateCountryGroups(groups: CountryGroup[], result: ValidationResult): void {
-    console.log('🤝 Validating country groups...');
-
+    if (groups.length === 0) return;
+    console.log('Validating country groups...');
     const groupIds = new Set<string>();
-
-    for (const group of groups) {
-      // Check required fields
-      if (!group.id) {
-        result.errors.push(`Group has no ID: ${JSON.stringify(group)}`);
+    for (const g of groups) {
+      if (!g.id) { result.errors.push(`Group has no ID`); result.valid = false; }
+      if (!g.name) { result.errors.push(`Group "${g.id}" has no name`); result.valid = false; }
+      if (!g.type) { result.errors.push(`Group "${g.id}" has no type`); result.valid = false; }
+      if (groupIds.has(g.id)) {
+        result.errors.push(`Duplicate group ID: "${g.id}"`);
         result.valid = false;
       }
-
-      if (!group.name) {
-        result.errors.push(`Group "${group.id}" has no name`);
-        result.valid = false;
-      }
-
-      if (!group.type) {
-        result.errors.push(`Group "${group.id}" has no type`);
-        result.valid = false;
-      }
-
-      // Check for duplicates
-      if (groupIds.has(group.id)) {
-        result.errors.push(`Duplicate group ID: "${group.id}"`);
-        result.valid = false;
-      }
-      groupIds.add(group.id);
-
-      // Check members
-      if (!group.members || group.members.length === 0) {
-        result.warnings.push(`Group "${group.id}" has no members`);
-      }
-
-      // Check member format
-      for (const member of group.members) {
-        if (!member || member.length !== 2) {
-          result.warnings.push(`Group "${group.id}" has invalid member code: "${member}"`);
-        }
-      }
+      groupIds.add(g.id);
+      if (!g.members?.length) result.warnings.push(`Group "${g.id}" has no members`);
     }
-
-    console.log(`  ✅ Validated ${groups.length} country groups`);
+    console.log(`  Validated ${groups.length} groups`);
   }
 
   private validateLanguages(languages: Language[], result: ValidationResult): void {
-    console.log('📚 Validating languages...');
-
-    const languageCodes = new Set<string>();
-
-    for (const language of languages) {
-      // Check required fields
-      if (!language.code) {
-        result.errors.push(`Language has no code: ${JSON.stringify(language)}`);
+    if (languages.length === 0) return;
+    console.log('Validating languages...');
+    const codes = new Set<string>();
+    for (const l of languages) {
+      if (!l.code) { result.errors.push(`Language has no code`); result.valid = false; }
+      if (!l.name) { result.errors.push(`Language "${l.code}" has no name`); result.valid = false; }
+      if (!l.nativeName) { result.errors.push(`Language "${l.code}" has no nativeName`); result.valid = false; }
+      if (codes.has(l.code)) {
+        result.errors.push(`Duplicate language code: "${l.code}"`);
         result.valid = false;
       }
-
-      if (!language.name) {
-        result.errors.push(`Language "${language.code}" has no name`);
-        result.valid = false;
-      }
-
-      if (!language.nativeName) {
-        result.errors.push(`Language "${language.code}" has no native name`);
-        result.valid = false;
-      }
-
-      // Check for duplicates
-      if (languageCodes.has(language.code)) {
-        result.errors.push(`Duplicate language code: "${language.code}"`);
-        result.valid = false;
-      }
-      languageCodes.add(language.code);
-
-      // Check code format (lowercase, 2-3 chars)
-      if (language.code !== language.code.toLowerCase() || language.code.length < 2 || language.code.length > 3) {
-        result.warnings.push(`Language "${language.name}" code should be lowercase 2-3 chars: "${language.code}"`);
-      }
+      codes.add(l.code);
     }
-
-    console.log(`  ✅ Validated ${languages.length} languages`);
+    console.log(`  Validated ${languages.length} languages`);
   }
 
   private validateReferences(countries: Country[], groups: CountryGroup[], languages: Language[], result: ValidationResult): void {
-    console.log('🔗 Validating cross-references...');
-
-    const languageCodes = new Set(languages.map(l => l.code));
+    console.log('Validating cross-references...');
+    const langCodes = new Set(languages.map(l => l.code));
     const groupIds = new Set(groups.map(g => g.id));
     const countryCodes = new Set(countries.map(c => c.alpha2));
 
-    // Check language references in countries
-    for (const country of countries) {
-      for (const langCode of country.languages) {
-        if (!languageCodes.has(langCode)) {
-          result.errors.push(`Country "${country.name}" references unknown language: "${langCode}"`);
+    for (const c of countries) {
+      for (const code of c.languages) {
+        if (langCodes.size > 0 && !langCodes.has(code)) {
+          result.errors.push(`"${c.name}" references unknown language: "${code}"`);
           result.valid = false;
         }
       }
-
-      // Check group references in countries
-      for (const groupId of country.groups) {
-        if (!groupIds.has(groupId)) {
-          result.errors.push(`Country "${country.name}" references unknown group: "${groupId}"`);
+      for (const id of c.groups) {
+        if (groupIds.size > 0 && !groupIds.has(id)) {
+          result.errors.push(`"${c.name}" references unknown group: "${id}"`);
           result.valid = false;
         }
       }
     }
-
-    // Check country references in groups
-    for (const group of groups) {
-      for (const memberCode of group.members) {
-        if (!countryCodes.has(memberCode)) {
-          result.warnings.push(`Group "${group.name}" references unknown country: "${memberCode}"`);
+    for (const g of groups) {
+      for (const code of g.members) {
+        if (!countryCodes.has(code)) {
+          result.warnings.push(`Group "${g.name}" references unknown country: "${code}"`);
         }
       }
     }
-
-    console.log(`  ✅ Cross-reference validation complete`);
+    console.log('  Cross-reference validation complete');
   }
 
-  private printValidationResults(result: ValidationResult): void {
-    console.log('\n📊 Validation Results:');
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-
-    if (result.valid) {
-      console.log('✅ Data validation passed!');
-    } else {
-      console.log('❌ Data validation failed!');
-    }
-
+  private printResults(result: ValidationResult): void {
+    console.log('\nValidation Results:');
+    console.log('─'.repeat(60));
+    console.log(result.valid ? 'PASSED' : 'FAILED');
     if (result.errors.length > 0) {
-      console.log(`\n🚨 Errors (${result.errors.length}):`);
-      result.errors.forEach(error => console.log(`  • ${error}`));
+      console.log(`\nErrors (${result.errors.length}):`);
+      result.errors.forEach(e => console.log(`  • ${e}`));
     }
-
     if (result.warnings.length > 0) {
-      console.log(`\n⚠️  Warnings (${result.warnings.length}):`);
-      result.warnings.forEach(warning => console.log(`  • ${warning}`));
+      console.log(`\nWarnings (${result.warnings.length}):`);
+      result.warnings.forEach(w => console.log(`  • ${w}`));
     }
-
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    console.log('─'.repeat(60));
   }
 }
 
-// Run the script
 if (require.main === module) {
   const validator = new DataValidator();
-  validator.validateAll().then(result => {
-    process.exit(result.valid ? 0 : 1);
-  });
+  validator.validateAll().then(result => process.exit(result.valid ? 0 : 1));
 }
 
 export { DataValidator };

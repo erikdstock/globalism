@@ -14,10 +14,13 @@
     "update-countries": "tsx scripts/fetch-countries.ts",
     "update-groups": "tsx scripts/update-groups.ts",
     "update-languages": "tsx scripts/update-languages.ts",
+    "update-address-formats": "tsx scripts/fetch-address-formats.ts",
     "validate-data": "tsx scripts/validate-data.ts"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/js-yaml": "^4.0.9",
+    "js-yaml": "^4.1.0",
     "@tailwindcss/postcss": "^4",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -27,7 +30,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.3.2",
+    "eslint-config-next": "^16.1.6",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "tailwindcss": "^4",

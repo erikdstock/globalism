@@ -1,8 +1,8 @@
 #!/usr/bin/env tsx
 
-import { writeFileSync } from 'fs';
-import { join } from 'path';
-import type { Country, CountryGroup, Language } from '../packages/globalism/src/data/types';
+import { writeFileSync, mkdirSync } from 'fs';
+import { join, dirname } from 'path';
+import type { Country } from '../packages/globalism/src/data/types';
 
 interface RestCountryData {
   cca2: string;
@@ -20,51 +20,23 @@ interface RestCountryData {
   };
   tld?: string[];
   flag?: string;
-  region?: string;
-  subregion?: string;
-  population?: number;
-  area?: number;
   postalCode?: {
     format: string;
     regex: string;
   };
 }
 
-interface WorldBankCountryData {
-  id: string;
-  name: string;
-  region: {
-    id: string;
-    value: string;
-  };
-  incomeLevel: {
-    id: string;
-    value: string;
-  };
-}
-
 class CountryDataFetcher {
   private baseUrl = 'https://restcountries.com/v3.1';
-  private worldBankUrl = 'https://api.worldbank.org/v2';
 
   async fetchRestCountries(): Promise<RestCountryData[]> {
     console.log('Fetching data from REST Countries API...');
     try {
-      // Try the main endpoint first
-      let response = await fetch(`${this.baseUrl}/all`);
-      
+      const response = await fetch(`${this.baseUrl}/all`);
       if (!response.ok) {
-        console.log(`Primary endpoint failed with status ${response.status}, trying alternative...`);
-        // Try alternative endpoint
-        response = await fetch(`${this.baseUrl}/all?fields=name,cca2,cca3,currencies,languages,idd,tld,flag,region,subregion,population,area`);
-      }
-      
-      if (!response.ok) {
-        console.log(`Alternative endpoint failed with status ${response.status}, using fallback data...`);
-        // Return minimal fallback data
+        console.log(`Primary endpoint failed (${response.status}), using fallback data...`);
         return this.getFallbackCountryData();
       }
-      
       return await response.json();
     } catch (error) {
       console.error('Error fetching REST Countries data:', error);
@@ -74,79 +46,53 @@ class CountryDataFetcher {
   }
 
   private getFallbackCountryData(): RestCountryData[] {
-    // Basic fallback data for common countries
     return [
       {
-        cca2: 'US',
-        cca3: 'USA',
+        cca2: 'US', cca3: 'USA',
         name: { common: 'United States', official: 'United States of America' },
         currencies: { USD: { name: 'United States dollar', symbol: '$' } },
         languages: { eng: 'English' },
         idd: { root: '+1', suffixes: [''] },
-        tld: ['.us'],
-        flag: '🇺🇸'
+        tld: ['.us'], flag: '🇺🇸',
       },
       {
-        cca2: 'CA',
-        cca3: 'CAN',
+        cca2: 'CA', cca3: 'CAN',
         name: { common: 'Canada', official: 'Canada' },
         currencies: { CAD: { name: 'Canadian dollar', symbol: '$' } },
         languages: { eng: 'English', fra: 'French' },
         idd: { root: '+1', suffixes: [''] },
-        tld: ['.ca'],
-        flag: '🇨🇦'
+        tld: ['.ca'], flag: '🇨🇦',
       },
       {
-        cca2: 'GB',
-        cca3: 'GBR',
+        cca2: 'GB', cca3: 'GBR',
         name: { common: 'United Kingdom', official: 'United Kingdom of Great Britain and Northern Ireland' },
         currencies: { GBP: { name: 'British pound', symbol: '£' } },
         languages: { eng: 'English' },
         idd: { root: '+44', suffixes: [''] },
-        tld: ['.uk'],
-        flag: '🇬🇧'
+        tld: ['.uk'], flag: '🇬🇧',
       },
       {
-        cca2: 'DE',
-        cca3: 'DEU',
+        cca2: 'DE', cca3: 'DEU',
         name: { common: 'Germany', official: 'Federal Republic of Germany' },
         currencies: { EUR: { name: 'Euro', symbol: '€' } },
         languages: { deu: 'German' },
         idd: { root: '+49', suffixes: [''] },
-        tld: ['.de'],
-        flag: '🇩🇪'
+        tld: ['.de'], flag: '🇩🇪',
       },
       {
-        cca2: 'FR',
-        cca3: 'FRA',
+        cca2: 'FR', cca3: 'FRA',
         name: { common: 'France', official: 'French Republic' },
         currencies: { EUR: { name: 'Euro', symbol: '€' } },
         languages: { fra: 'French' },
         idd: { root: '+33', suffixes: [''] },
-        tld: ['.fr'],
-        flag: '🇫🇷'
-      }
+        tld: ['.fr'], flag: '🇫🇷',
+      },
     ];
-  }
-
-  async fetchWorldBankData(): Promise<WorldBankCountryData[]> {
-    console.log('Fetching data from World Bank API...');
-    try {
-      const response = await fetch(`${this.worldBankUrl}/country?format=json&per_page=300`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      return data[1] || []; // World Bank API returns [metadata, data]
-    } catch (error) {
-      console.error('Error fetching World Bank data:', error);
-      return [];
-    }
   }
 
   private extractPhoneCode(idd?: { root: string; suffixes: string[] }): string {
     if (!idd?.root) return '';
-    const suffix = idd.suffixes?.[0] || '';
+    const suffix = idd.suffixes?.[0] ?? '';
     return `${idd.root}${suffix}`;
   }
 
@@ -156,73 +102,98 @@ class CountryDataFetcher {
   } {
     if (!currencies) return { code: '', symbol: '' };
     const [code, currency] = Object.entries(currencies)[0];
-    return { code, symbol: currency.symbol || '' };
+    return { code, symbol: currency.symbol ?? '' };
   }
+
+  // Complete ISO 639-1: 3-letter → 2-letter code mapping
+  private readonly iso3To2: Record<string, string> = {
+    'afr': 'af', 'aka': 'ak', 'sqi': 'sq', 'amh': 'am', 'ara': 'ar', 'arg': 'an',
+    'hye': 'hy', 'ava': 'av', 'aze': 'az', 'bam': 'bm', 'bak': 'ba', 'eus': 'eu',
+    'bel': 'be', 'ben': 'bn', 'bih': 'bh', 'bis': 'bi', 'bos': 'bs', 'bre': 'br',
+    'bul': 'bg', 'mya': 'my', 'cat': 'ca', 'cha': 'ch', 'che': 'ce', 'nya': 'ny',
+    'zho': 'zh', 'chv': 'cv', 'cor': 'kw', 'cos': 'co', 'cre': 'cr', 'hrv': 'hr',
+    'ces': 'cs', 'dan': 'da', 'div': 'dv', 'nld': 'nl', 'dzo': 'dz', 'eng': 'en',
+    'epo': 'eo', 'est': 'et', 'ewe': 'ee', 'fao': 'fo', 'fij': 'fj', 'fin': 'fi',
+    'fra': 'fr', 'ful': 'ff', 'glg': 'gl', 'kat': 'ka', 'deu': 'de', 'ell': 'el',
+    'grn': 'gn', 'guj': 'gu', 'hat': 'ht', 'hau': 'ha', 'heb': 'he', 'her': 'hz',
+    'hin': 'hi', 'hmo': 'ho', 'hun': 'hu', 'ina': 'ia', 'ind': 'id', 'ile': 'ie',
+    'gle': 'ga', 'ibo': 'ig', 'iku': 'iu', 'ido': 'io', 'isl': 'is', 'ita': 'it',
+    'iii': 'ii', 'inu': 'ik', 'jpn': 'ja', 'jav': 'jv', 'kln': 'kl', 'kan': 'kn',
+    'kau': 'kr', 'kas': 'ks', 'kaz': 'kk', 'khm': 'km', 'kik': 'ki', 'kin': 'rw',
+    'kir': 'ky', 'kom': 'kv', 'kon': 'kg', 'kor': 'ko', 'kur': 'ku', 'kua': 'kj',
+    'lat': 'la', 'ltz': 'lb', 'lug': 'lg', 'lim': 'li', 'lin': 'ln', 'lao': 'lo',
+    'lit': 'lt', 'lub': 'lu', 'lav': 'lv', 'glv': 'gv', 'mkd': 'mk', 'mlg': 'mg',
+    'msa': 'ms', 'mal': 'ml', 'mlt': 'mt', 'mri': 'mi', 'mar': 'mr', 'mah': 'mh',
+    'mon': 'mn', 'nau': 'na', 'nav': 'nv', 'nob': 'nb', 'nde': 'nd', 'nep': 'ne',
+    'ndo': 'ng', 'nno': 'nn', 'nor': 'no', 'nbl': 'nr', 'oci': 'oc', 'oji': 'oj',
+    'ori': 'or', 'orm': 'om', 'oss': 'os', 'pan': 'pa', 'pli': 'pi', 'fas': 'fa',
+    'pol': 'pl', 'pus': 'ps', 'por': 'pt', 'que': 'qu', 'roh': 'rm', 'run': 'rn',
+    'ron': 'ro', 'rus': 'ru', 'san': 'sa', 'srd': 'sc', 'snd': 'sd', 'sme': 'se',
+    'smo': 'sm', 'sag': 'sg', 'srp': 'sr', 'gla': 'gd', 'sna': 'sn', 'sin': 'si',
+    'slk': 'sk', 'slv': 'sl', 'som': 'so', 'sot': 'st', 'spa': 'es', 'sun': 'su',
+    'swa': 'sw', 'ssw': 'ss', 'swe': 'sv', 'tam': 'ta', 'tel': 'te', 'tgk': 'tg',
+    'tha': 'th', 'tir': 'ti', 'bod': 'bo', 'tuk': 'tk', 'tgl': 'tl', 'tsn': 'tn',
+    'ton': 'to', 'tur': 'tr', 'tso': 'ts', 'tat': 'tt', 'twi': 'tw', 'tah': 'ty',
+    'uig': 'ug', 'ukr': 'uk', 'urd': 'ur', 'uzb': 'uz', 'ven': 've', 'vie': 'vi',
+    'vol': 'vo', 'wln': 'wa', 'cym': 'cy', 'wol': 'wo', 'fry': 'fy', 'xho': 'xh',
+    'yid': 'yi', 'yor': 'yo', 'zha': 'za', 'zul': 'zu',
+  };
 
   private extractLanguages(languages?: Record<string, string>): string[] {
     if (!languages) return [];
-    return Object.keys(languages).map(key => {
-      // Convert 3-letter codes to 2-letter codes
-      const mapping: Record<string, string> = {
-        'eng': 'en',
-        'fra': 'fr',
-        'deu': 'de',
-        'spa': 'es',
-        'ita': 'it',
-        'por': 'pt',
-        'rus': 'ru',
-        'ara': 'ar',
-        'zho': 'zh',
-        'jpn': 'ja',
-        'kor': 'ko',
-        'hin': 'hi'
-      };
-      return mapping[key] || key;
-    });
+    return Object.keys(languages).map(key => this.iso3To2[key] ?? key);
   }
 
   private extractNativeNames(nativeName?: Record<string, { official: string; common: string }>): string[] {
     if (!nativeName) return [];
-    return Object.values(nativeName).map(name => name.common);
+    return Object.values(nativeName).map(n => n.common);
   }
 
+  // Patterns use single-escaped regex strings (correct for JSON storage and new RegExp())
   private generatePhoneRegex(phoneCode: string): string {
-    // Basic phone regex patterns by country code
     const patterns: Record<string, string> = {
-      '+1': '^\\\\(?\\\\d{3}\\\\)?[-.\\\\s]?\\\\d{3}[-.\\\\s]?\\\\d{4}$', // US/Canada
-      '+44': '^\\\\d{4}\\\\s?\\\\d{6}$', // UK
-      '+33': '^\\\\d{2}\\\\s?\\\\d{2}\\\\s?\\\\d{2}\\\\s?\\\\d{2}\\\\s?\\\\d{2}$', // France
-      '+49': '^\\\\d{3,4}\\\\s?\\\\d{7,8}$', // Germany
-      '+81': '^\\\\d{2,3}\\\\s?\\\\d{4}\\\\s?\\\\d{4}$', // Japan
-      '+86': '^\\\\d{3}\\\\s?\\\\d{4}\\\\s?\\\\d{4}$', // China
+      '+1':  '^\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}$',
+      '+44': '^\\d{4}\\s?\\d{6}$',
+      '+33': '^\\d{2}\\s?\\d{2}\\s?\\d{2}\\s?\\d{2}\\s?\\d{2}$',
+      '+49': '^\\d{3,4}\\s?\\d{7,8}$',
+      '+81': '^\\d{2,3}\\s?\\d{4}\\s?\\d{4}$',
+      '+86': '^\\d{3}\\s?\\d{4}\\s?\\d{4}$',
+      '+91': '^[6-9]\\d{9}$',
+      '+61': '^0?[2-478]\\s?\\d{4}\\s?\\d{4}$',
+      '+55': '^\\(?\\d{2}\\)?\\s?\\d{4,5}[-.\\s]?\\d{4}$',
+      '+7':  '^\\d{10}$',
     };
-    return patterns[phoneCode] || '^\\\\d{7,15}$'; // Default pattern
+    return patterns[phoneCode] ?? '^\\d{7,15}$';
   }
 
   private generatePhoneFormat(phoneCode: string): string {
     const formats: Record<string, string> = {
-      '+1': '(###) ###-####',
+      '+1':  '(###) ###-####',
       '+44': '#### ######',
       '+33': '## ## ## ## ##',
       '+49': '### ########',
       '+81': '##-####-####',
       '+86': '### #### ####',
+      '+91': '##### #####',
+      '+61': '## #### ####',
+      '+55': '(##) #####-####',
+      '+7':  '### ###-##-##',
     };
-    return formats[phoneCode] || '###########';
+    return formats[phoneCode] ?? '###########';
   }
 
-  transformToCountryData(restData: RestCountryData[], worldBankData: WorldBankCountryData[]): Country[] {
+  transformToCountryData(restData: RestCountryData[]): Country[] {
     console.log(`Transforming ${restData.length} countries...`);
-    
+
     return restData
-      .filter(country => country.cca2 && country.cca3) // Filter out invalid entries
+      .filter(c => c.cca2 && c.cca3)
       .map(country => {
         const currency = this.extractCurrency(country.currencies);
         const phoneCode = this.extractPhoneCode(country.idd);
-        
-        const transformedCountry: Country = {
-          alpha2: country.cca2,
-          alpha3: country.cca3,
+
+        const transformed: Country = {
+          alpha2: country.cca2.toUpperCase(),
+          alpha3: country.cca3.toUpperCase(),
           name: country.name.common,
           officialName: country.name.official,
           nativeNames: this.extractNativeNames(country.name.nativeName),
@@ -232,47 +203,36 @@ class CountryDataFetcher {
           phoneCountryCode: phoneCode,
           phoneRegexp: this.generatePhoneRegex(phoneCode),
           phoneFormat: this.generatePhoneFormat(phoneCode),
-          tld: country.tld?.[0] || '',
-          flag: country.flag || '',
-          groups: [], // Will be populated by group membership scripts
-          postalCodeRegexp: country.postalCode?.regex || '',
-          postalCodeFormat: country.postalCode?.format || '',
+          tld: country.tld?.[0] ?? '',
+          flag: country.flag ?? '',
+          groups: [],
+          postalCodeRegexp: country.postalCode?.regex ?? '',
+          postalCodeFormat: country.postalCode?.format ?? '',
         };
 
-        return transformedCountry;
+        return transformed;
       })
       .sort((a, b) => a.name.localeCompare(b.name));
   }
 
   async generateCountriesFile(): Promise<void> {
-    try {
-      const [restData, worldBankData] = await Promise.all([
-        this.fetchRestCountries(),
-        this.fetchWorldBankData(),
-      ]);
+    const restData = await this.fetchRestCountries();
+    const countries = this.transformToCountryData(restData);
 
-      const countries = this.transformToCountryData(restData, worldBankData);
-      
-      const fileContent = `import type { Country } from "./types";
+    const outputPath = join(__dirname, '../packages/globalism/src/data/raw/countries.json');
+    mkdirSync(dirname(outputPath), { recursive: true });
+    writeFileSync(outputPath, JSON.stringify(countries, null, 2), 'utf-8');
 
-export const countries: Country[] = ${JSON.stringify(countries, null, 2)};
-`;
-
-      const filePath = join(__dirname, '../packages/globalism/src/data/countries.ts');
-      writeFileSync(filePath, fileContent, 'utf-8');
-      
-      console.log(`✅ Generated ${countries.length} countries in ${filePath}`);
-    } catch (error) {
-      console.error('❌ Error generating countries file:', error);
-      process.exit(1);
-    }
+    console.log(`Generated ${countries.length} countries → ${outputPath}`);
   }
 }
 
-// Run the script
 if (require.main === module) {
   const fetcher = new CountryDataFetcher();
-  fetcher.generateCountriesFile();
+  fetcher.generateCountriesFile().catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 }
 
 export { CountryDataFetcher };

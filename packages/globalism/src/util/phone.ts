@@ -23,8 +23,7 @@ export const validatePhoneNumber = (
   if (!cleanNumber) return false;
   
   try {
-    const unescapedRegex = country.phoneRegexp.replace(/\\\\/g, '\\');
-    const regex = new RegExp(unescapedRegex);
+    const regex = new RegExp(country.phoneRegexp);
     return regex.test(cleanNumber);
   } catch (error) {
     console.error(error)

@@ -39,6 +39,9 @@ export interface Country {
   /** Flag emoji */
   flag?: string;
 
+  /** OpenCageData Mustache address template lines, e.g. ["{{road}} {{house_number}}", "{{city}}, {{state_code}} {{postcode}}"] */
+  addressFormat?: string[];
+
   // drivingSide?: "left" | "right";
   // unMember?: boolean;
   // subtype: CountrySubtype;
@@ -78,6 +81,44 @@ export enum GroupingType {
   FreeTradeArea = "FREE_TRADE_AREA",
   CulturalGroup = "CULTURAL_GROUP",
   Other = "OTHER",
+}
+
+/**
+ * Address components following OpenCageData's address component vocabulary.
+ * Use getRequiredAddressComponents() to determine which fields are relevant
+ * for a given country's address template.
+ */
+export interface AddressComponents {
+  /** Recipient name, person or business */
+  recipient?: string;
+  /** House or building number */
+  house_number?: string;
+  /** Full building name (e.g. "Empire State Building") */
+  house?: string;
+  /** Street/road name */
+  road?: string;
+  /** Neighbourhood */
+  neighbourhood?: string;
+  /** Suburb (common in AU/NZ) */
+  suburb?: string;
+  /** City district or borough */
+  city_district?: string;
+  /** City or town */
+  city?: string;
+  /** Postal town (common in GB) */
+  postal_town?: string;
+  /** County or district */
+  county?: string;
+  /** State or province code (e.g. "CA", "NSW") */
+  state_code?: string;
+  /** Full state or province name */
+  state?: string;
+  /** Postcode or ZIP code */
+  postcode?: string;
+  /** Country name */
+  country?: string;
+  /** ISO 3166-1 alpha-2 country code */
+  country_code?: string;
 }
 
 /**

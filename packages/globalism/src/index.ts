@@ -5,5 +5,5 @@ export * from './data';
 export * from './util';
 
 // Re-export commonly used types for convenience
-export type { Country } from './data/types';
+export type { Country, CountryGroup, Language, AddressComponents } from './data/types';
 export type { PhoneNumberState, PhoneNumberStatus } from './util/phone';

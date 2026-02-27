@@ -10,7 +10,10 @@
       "Bash(grep:*)",
       "Bash(sed:*)",
       "Bash(yarn update-countries:*)",
-      "Bash(yarn install)"
+      "Bash(yarn install)",
+      "Bash(gh issue list --repo erikdstock/globalism --limit 20 --json number,title,body,labels)",
+      "Bash(gh issue view --repo erikdstock/globalism 1 --json body,title)",
+      "Bash(gh issue view --repo erikdstock/globalism 2 --json body,title)"
     ],
     "deny": []
   }

@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
+    "resolveJsonModule": true,
     "outDir": "./dist",
     "rootDir": "./src"
   },
