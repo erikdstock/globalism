@@ -139,4 +139,4 @@ Address templates are sourced from [OpenCageData address-formatting](https://git
 
 ## License
 
-MIT
+The library code is MIT. The published package bundles data from the sources above — the REST Countries data is CC BY-SA 4.0 (ShareAlike), meaning redistribution of that data must carry the same license. Packages that re-export the `countries` array should note this.

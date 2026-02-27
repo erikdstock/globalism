@@ -162,4 +162,4 @@ The `Update Country Data` GitHub Actions workflow runs this pipeline monthly and
 - Phone patterns: [libphonenumber-js](https://github.com/catamphetamine/libphonenumber-js) (MIT) — metadata derived from [Google's libphonenumber](https://github.com/google/libphonenumber) — [Apache 2.0](https://github.com/google/libphonenumber/blob/master/LICENSE)
 - Address templates: [OpenCageData address-formatting](https://github.com/OpenCageData/address-formatting) — [BSD 2-Clause](https://github.com/OpenCageData/address-formatting/blob/master/LICENSE)
 
-The `globalism` library itself is MIT licensed.
+The `globalism` library code is MIT licensed. The published package bundles data from the above sources — in particular, the REST Countries data is CC BY-SA 4.0 (ShareAlike), which means any redistribution of that data must carry the same license. Application developers consuming the library are generally unaffected, but downstream packages that re-export the `countries` array should note this.
