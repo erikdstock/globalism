@@ -31,8 +31,8 @@ export default function PhonePage() {
   };
 
   const handlePhoneInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    const analysis = analyzePhoneNumber(value, selectedCountry);
+    const digitsOnly = e.target.value.replace(/\D/g, "");
+    const analysis = analyzePhoneNumber(digitsOnly, selectedCountry);
     setPhoneNumber(analysis.formatted);
   };
 

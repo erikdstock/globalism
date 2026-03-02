@@ -53,7 +53,10 @@ class CountryDataFetcher {
 
   private extractPhoneCode(idd?: { root: string; suffixes: string[] }): string {
     if (!idd?.root) return '';
-    const suffix = idd.suffixes?.[0] ?? '';
+    // Only append the suffix when there's exactly one — that signals a true country
+    // code extension (e.g. Barbados: root="+1", suffixes=["246"] → "+1246").
+    // Countries with many suffixes (US, Canada) use area codes as suffixes; use root only.
+    const suffix = idd.suffixes?.length === 1 ? idd.suffixes[0] : '';
     return `${idd.root}${suffix}`;
   }
 

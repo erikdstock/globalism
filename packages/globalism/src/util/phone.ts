@@ -75,6 +75,7 @@ export type PhoneNumberStatus = 'empty' | 'partial' | 'complete' | 'invalid';
 export interface PhoneNumberState {
   status: PhoneNumberStatus;
   formatted: string;
+  digits: string;         // digit-only form, e.g. "4155552671"
   original: string;
   international: string;
 }
@@ -90,17 +91,19 @@ export const analyzePhoneNumber = (
     return {
       status: 'invalid',
       formatted: original,
+      digits: original.replace(/\D/g, ""),
       original,
       international: original
     };
   }
-  
+
   const digitsOnly = phoneNumber.replace(/\D/g, "");
-  
+
   if (!digitsOnly) {
     return {
       status: 'empty',
       formatted: original,
+      digits: '',
       original,
       international: original
     };
@@ -134,32 +137,36 @@ export const analyzePhoneNumber = (
     return {
       status: 'invalid',
       formatted: original,
+      digits: digitsOnly,
       original,
       international: original
     };
   }
-  
+
   if (actualDigits < expectedDigits) {
     return {
       status: 'partial',
       formatted,
+      digits: digitsOnly,
       original,
       international: `${phoneCountryCode} ${formatted}`
     };
   }
-  
+
   const isValidFormat = validatePhoneNumber(phoneNumber, country);
-  
-  return isValidFormat 
+
+  return isValidFormat
     ? {
         status: 'complete',
         formatted,
+        digits: digitsOnly,
         original,
         international: `${phoneCountryCode} ${formatted}`
       }
     : {
         status: 'invalid',
         formatted: original,
+        digits: digitsOnly,
         original,
         international: original
       };
