@@ -1834,12 +1834,13 @@
     ],
     "currency": "DOP",
     "currencySymbol": "$",
-    "phoneCountryCode": "+1809",
+    "phoneCountryCode": "+1",
     "tld": ".do",
     "flag": "🇩🇴",
     "groups": [
       "NORTH_AMERICA"
     ],
+    "phoneFormat": "(###) ###-####",
     "postalCodeRegexp": "^(\\d{5})$",
     "postalCodeFormat": "#####",
     "phoneRegexp": "^(?:(?:[58]\\d\\d|900)\\d{7})$",
@@ -3321,13 +3322,14 @@
     ],
     "currency": "JMD",
     "currencySymbol": "$",
-    "phoneCountryCode": "+1876",
+    "phoneCountryCode": "+1",
     "tld": ".jm",
     "flag": "🇯🇲",
     "groups": [
       "COMMONWEALTH",
       "NORTH_AMERICA"
     ],
+    "phoneFormat": "(###) ###-####",
     "phoneRegexp": "^(?:(?:[58]\\d\\d|658|900)\\d{7})$",
     "addressFormat": [
       "{{{attention}}}",
@@ -3444,12 +3446,13 @@
     ],
     "currency": "KZT",
     "currencySymbol": "₸",
-    "phoneCountryCode": "+76",
+    "phoneCountryCode": "+7",
     "tld": ".kz",
     "flag": "🇰🇿",
     "groups": [
       "ASIA"
     ],
+    "phoneFormat": "### ###-##-##",
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
     "phoneRegexp": "^(?:8\\d{13}|[78]\\d{9})$",
@@ -5420,10 +5423,11 @@
     ],
     "currency": "USD",
     "currencySymbol": "$",
-    "phoneCountryCode": "+1787",
+    "phoneCountryCode": "+1",
     "tld": ".pr",
     "flag": "🇵🇷",
     "groups": [],
+    "phoneFormat": "(###) ###-####",
     "postalCodeRegexp": "^(\\d{9})$",
     "postalCodeFormat": "#####-####",
     "phoneRegexp": "^(?:(?:[589]\\d\\d|787)\\d{7})$"
@@ -5556,7 +5560,7 @@
     ],
     "currency": "RUB",
     "currencySymbol": "₽",
-    "phoneCountryCode": "+73",
+    "phoneCountryCode": "+7",
     "tld": ".ru",
     "flag": "🇷🇺",
     "groups": [
@@ -5565,6 +5569,7 @@
       "EUROPE",
       "ASIA"
     ],
+    "phoneFormat": "### ###-##-##",
     "postalCodeRegexp": "^(\\d{6})$",
     "postalCodeFormat": "######",
     "phoneRegexp": "^(?:8\\d{13}|[347-9]\\d{9})$",
@@ -5645,7 +5650,7 @@
     ],
     "currency": "GBP",
     "currencySymbol": "£",
-    "phoneCountryCode": "+290",
+    "phoneCountryCode": "+2",
     "tld": ".sh",
     "flag": "🇸🇭",
     "groups": [],
@@ -7168,7 +7173,7 @@
     ],
     "currency": "USD",
     "currencySymbol": "$",
-    "phoneCountryCode": "+1201",
+    "phoneCountryCode": "+1",
     "tld": ".us",
     "flag": "🇺🇸",
     "groups": [
@@ -7178,6 +7183,7 @@
       "G20",
       "NORTH_AMERICA"
     ],
+    "phoneFormat": "(###) ###-####",
     "postalCodeRegexp": "^\\d{5}(-\\d{4})?$",
     "postalCodeFormat": "#####-####",
     "phoneRegexp": "^(?:[2-9]\\d{9}|3\\d{6})$",
@@ -7340,7 +7346,7 @@
     ],
     "currency": "EUR",
     "currencySymbol": "€",
-    "phoneCountryCode": "+3906698",
+    "phoneCountryCode": "+3",
     "tld": ".va",
     "flag": "🇻🇦",
     "groups": [
@@ -7448,7 +7454,7 @@
     ],
     "currency": "DZD",
     "currencySymbol": "دج",
-    "phoneCountryCode": "+2125288",
+    "phoneCountryCode": "+2",
     "tld": ".eh",
     "flag": "🇪🇭",
     "groups": [],

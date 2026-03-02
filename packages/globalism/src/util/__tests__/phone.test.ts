@@ -171,6 +171,7 @@ describe("phone utilities", () => {
       const result = analyzePhoneNumber("", mockCountryUS);
       expect(result.status).toBe("empty");
       expect(result.formatted).toBe("");
+      expect(result.digits).toBe("");
       expect(result.original).toBe("");
       expect(result.international).toBe("");
     });
@@ -179,6 +180,7 @@ describe("phone utilities", () => {
       const result = analyzePhoneNumber("123", mockCountryUS);
       expect(result.status).toBe("partial");
       expect(result.formatted).toBe("(123");
+      expect(result.digits).toBe("123");
       expect(result.original).toBe("123");
       expect(result.international).toBe("+1 (123");
     });
@@ -187,6 +189,7 @@ describe("phone utilities", () => {
       const result = analyzePhoneNumber("5551234567", mockCountryUS);
       expect(result.status).toBe("complete");
       expect(result.formatted).toBe("(555) 123-4567");
+      expect(result.digits).toBe("5551234567");
       expect(result.original).toBe("5551234567");
       expect(result.international).toBe("+1 (555) 123-4567");
     });
@@ -195,6 +198,7 @@ describe("phone utilities", () => {
       const result = analyzePhoneNumber("55512345678", mockCountryUS);
       expect(result.status).toBe("invalid");
       expect(result.formatted).toBe("55512345678");
+      expect(result.digits).toBe("55512345678");
       expect(result.original).toBe("55512345678");
       expect(result.international).toBe("55512345678");
     });
