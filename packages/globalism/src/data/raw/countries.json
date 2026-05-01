@@ -3586,7 +3586,7 @@
     "addressFormat": [
       "{{{attention}}}",
       "{{{house}}}",
-      "{{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}",
+      "{{#first}} {{{area}}} {{{city_block}}} || {{{neighbourhood}}} || {{{city_district}}} || {{{suburb}}} {{/first}}",
       "{{{road}}}",
       "{{{house_number}}} {{{house}}}",
       "{{{postcode}}} {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}",
